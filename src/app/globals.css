@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+/*
+  Manitoba Lock & Safe — design tokens.
+  Palette follows the company logo and the Winnipeg Jets colours it shares.
+*/
+@theme {
+  --color-navy-950: #02132a;
+  --color-navy-900: #041e42; /* primary navy */
+  --color-navy-800: #0a2c5c;
+  --color-navy-700: #123a72;
+  --color-blue-600: #004c97; /* aviator blue */
+  --color-blue-500: #1266b8;
+  --color-blue-100: #dceaf7;
+  --color-red-700: #8c1023;
+  --color-red-600: #ac162c; /* primary red */
+  --color-red-500: #c8253c;
+  --color-silver-500: #8e9090;
+  --color-silver-300: #c8cbcd;
+  --color-silver-100: #eef1f3;
+  --color-ink: #10161f;
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-barlow), ui-sans-serif, system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #ffffff;
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Utility: the diagonal navy/red split used in the logo shield */
+.brand-rule {
+  background: linear-gradient(
+    90deg,
+    var(--color-navy-900) 0%,
+    var(--color-navy-900) 50%,
+    var(--color-red-600) 50%,
+    var(--color-red-600) 100%
+  );
+}
+
+/* Subtle keyhole grid used behind dark sections */
+.hero-texture {
+  background-image:
+    radial-gradient(circle at 20% 20%, rgba(0, 76, 151, 0.45), transparent 55%),
+    radial-gradient(circle at 85% 15%, rgba(172, 22, 44, 0.28), transparent 50%),
+    linear-gradient(160deg, #041e42 0%, #02132a 100%);
+}
+
+.section-fade {
+  background: linear-gradient(180deg, #ffffff 0%, var(--color-silver-100) 100%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
