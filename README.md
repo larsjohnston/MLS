@@ -73,23 +73,56 @@ ASSA Abloy / Schlage. Confirm each is current and remove any that is not.
 Three representative roles are listed. Remove any position you are not actively
 hiring for, and adjust the benefits list to match what you actually offer.
 
-### 7. Photography
+### 7. Team photo and other photography
 
-The site currently uses no photographs — it is built on typography, colour and
-iconography, so it looks complete without them. Real photos of technicians,
-vehicles and completed work would strengthen it considerably. Drop images in
-`public/` and add them to the hero and industry sections.
+The About page has a team photo slot that currently renders a dashed placeholder
+box. Add the file to `public/` and set `media.teamPhoto` in `src/data/site.ts`
+(e.g. `"/team.jpg"`) — the placeholder disappears and the real photo takes its
+place, with alt text from `media.teamPhotoAlt`.
 
-### 8. Logo
+The rest of the site is built on typography, colour and iconography, so it looks
+complete without photographs. Real photos of technicians, vehicles and completed
+work would strengthen it further. Anything you add needs descriptive alt text.
+
+### 8. Google Analytics
+
+Create a GA4 property, then set `NEXT_PUBLIC_GA_ID` (e.g. `G-XXXXXXXXXX`) in
+Vercel → Settings → Environment Variables. With the variable unset, no analytics
+scripts load at all — see `.env.example`.
+
+Set up **`/thank-you` as a conversion goal** in GA4. The quote form redirects
+there on successful submission, which is exactly what makes lead tracking
+possible.
+
+`NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` is also supported for Search Console HTML
+tag verification.
+
+### 9. Privacy policy review
+
+`/privacy` describes what the site as built actually does with visitor data, in
+line with PIPEDA. It is not legal advice — have a lawyer review it, bump the
+`LAST_UPDATED` constant in `src/app/privacy/page.tsx`, and update it whenever you
+add a tool that touches visitor data (chat widget, booking tool, ad pixel, call
+tracking).
+
+### 10. Map accuracy
+
+The contact page embeds a Google map and a "Get directions" link driven by the
+address in `src/data/site.ts`. Until you replace the placeholder address, the map
+will point at the wrong place. The whole map section hides itself automatically
+if you set `address.hasStorefront: false`.
+
+### 11. Logo
 
 `src/components/Logo.tsx` contains a vector recreation of the shield mark. If
 you have the original artwork, add it at `public/logo.svg` and swap the
 `ShieldMark` component for a `next/image`. The favicon is `src/app/icon.svg` and
-should be updated to match.
+the social share image is `src/app/opengraph-image.tsx` — both should be updated
+to match if the mark changes.
 
 ---
 
-## Site structure — 69 static pages
+## Site structure — 72 static pages
 
 | Route | Pages | Notes |
 | --- | --- | --- |
@@ -100,7 +133,34 @@ should be updated to match.
 | `/case-studies` + `/case-studies/[slug]` | 6 | 5 named clients |
 | `/blog` + `/blog/[slug]` | 7 | 6 long-form articles |
 | `/about`, `/contact`, `/faq`, `/careers` | 4 | |
-| `/sitemap.xml`, `/robots.txt`, `404` | 3 | Generated |
+| `/thank-you` | 1 | Post-submission conversion page (noindex) |
+| `/privacy` | 1 | PIPEDA-aligned privacy policy |
+| `/sitemap.xml`, `/robots.txt`, `/opengraph-image`, `404` | 4 | Generated |
+
+### Pre-launch checklist coverage
+
+| # | Item | Status |
+| --- | --- | --- |
+| 1 | Custom 404 page | ✅ `src/app/not-found.tsx`, with popular-service links |
+| 2 | CTA above the fold | ✅ Call + quote buttons and the form itself, all above the fold |
+| 3 | Internal links | ✅ Services ↔ industries ↔ locations ↔ case studies, cross-linked throughout |
+| 4 | Thank-you page | ✅ `/thank-you`, noindex, form redirects on success |
+| 5 | Breadcrumbs | ✅ Visible on every inner page + `BreadcrumbList` schema |
+| 6 | Case studies | ✅ 5 — pending client sign-off (see item 4 above) |
+| 7 | 5 FAQs | ✅ 26 across 6 categories, plus FAQs on every service and industry page |
+| 8 | Response time promise | ✅ 30-minute Winnipeg promise, plus per-area response times |
+| 9 | Sticky mobile CTA | ✅ Fixed bottom call/quote bar under 640px |
+| 10 | robots.txt | ✅ Generated, references the sitemap |
+| 11 | Unique page titles | ✅ Every page, verified across all 72 |
+| 12 | Meta descriptions | ✅ Every page, hand-written |
+| 13 | Social share image | ✅ Generated 1200×630 OG image, on every page |
+| 14 | Maps + directions | ✅ Map embed and directions link on contact, directions in footer |
+| 15 | Real reviews | ⚠️ **Yours to supply** — placeholders flagged on-site |
+| 16 | Alt text on images | ✅ No raster images yet; SVGs labelled, team photo slot has alt text |
+| 17 | Local schema | ✅ `Locksmith`/`LocalBusiness` + `Service`, `FAQPage`, `BlogPosting` |
+| 18 | Privacy policy | ✅ `/privacy` — needs legal review |
+| 19 | Google Analytics | ✅ Wired, needs `NEXT_PUBLIC_GA_ID` |
+| 20 | Team photo | ⚠️ **Yours to supply** — slot built, placeholder shown until then |
 
 ## SEO implementation
 

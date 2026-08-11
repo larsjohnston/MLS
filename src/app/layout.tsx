@@ -4,6 +4,7 @@ import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { MobileCallBar } from "@/components/MobileCallBar";
+import { Analytics } from "@/components/Analytics";
 import { JsonLd } from "@/lib/seo";
 import { localBusinessSchema, websiteSchema } from "@/lib/schema";
 import { site } from "@/data/site";
@@ -55,6 +56,13 @@ export const metadata: Metadata = {
     siteName: site.name,
     url: site.url,
   },
+  ...(process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
+    ? {
+        verification: {
+          google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
+        },
+      }
+    : {}),
 };
 
 export const viewport = {
@@ -76,6 +84,7 @@ export default function RootLayout({
         <MobileCallBar />
         {/* spacer so the fixed mobile call bar never covers footer content */}
         <div className="h-16 sm:hidden" aria-hidden="true" />
+        <Analytics />
       </body>
     </html>
   );

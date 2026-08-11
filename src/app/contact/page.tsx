@@ -1,4 +1,4 @@
-import { site } from "@/data/site";
+import { site, fullAddress, mapEmbedUrl, directionsUrl } from "@/data/site";
 import { winnipegLocations, manitobaLocations } from "@/data/locations";
 import { PageHero } from "@/components/PageHero";
 import { Icon } from "@/components/Icon";
@@ -83,6 +83,15 @@ export default function ContactPage() {
                       {site.address.locality}, {site.address.region}{" "}
                       {site.address.postalCode}
                     </p>
+                    <a
+                      href={directionsUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-2 inline-flex items-center gap-1.5 text-sm font-bold text-blue-600 hover:underline"
+                    >
+                      Get directions
+                      <Icon name="arrow" className="h-4 w-4" />
+                    </a>
                   </div>
                 </div>
               )}
@@ -127,7 +136,46 @@ export default function ContactPage() {
         </div>
       </Section>
 
-      <Section tone="light">
+      {site.address.hasStorefront && (
+        <Section tone="light">
+          <div className="grid gap-8 lg:grid-cols-[1fr_1.6fr] lg:items-center">
+            <div>
+              <SectionHeading
+                eyebrow="Find us"
+                title="Our Winnipeg shop"
+                blurb="Most commercial work happens at your building, but the shop is here if you need to drop off a lock, a safe door or a cabinet front."
+              />
+              <div className="mt-6 rounded-xl border border-silver-300 bg-white p-5">
+                <p className="flex items-start gap-2.5 text-sm text-navy-800">
+                  <Icon name="pin" className="mt-0.5 h-5 w-5 shrink-0 text-red-600" />
+                  <span>{fullAddress}</span>
+                </p>
+                <a
+                  href={directionsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-4 flex items-center justify-center gap-2 rounded-lg bg-navy-900 px-4 py-3 font-display text-sm font-bold uppercase tracking-wide text-white hover:bg-navy-800"
+                >
+                  <Icon name="pin" className="h-4 w-4" />
+                  Get directions
+                </a>
+              </div>
+            </div>
+            <div className="overflow-hidden rounded-2xl border border-silver-300 bg-white shadow-sm">
+              <iframe
+                title={`Map showing ${site.name} at ${fullAddress}`}
+                src={mapEmbedUrl}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="h-[380px] w-full border-0"
+                allowFullScreen
+              />
+            </div>
+          </div>
+        </Section>
+      )}
+
+      <Section>
         <SectionHeading
           eyebrow="Coverage"
           title="Where we work"

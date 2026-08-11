@@ -66,7 +66,31 @@ export const site = {
   // Where the quote form posts. TODO: create a Formspree (or similar) endpoint
   // and paste the URL here, or set up an email-forwarding API route.
   formEndpoint: "",
+
+  // TODO: drop real photographs into /public and reference them here. Any entry
+  // left empty renders a clearly-marked placeholder instead of a broken image.
+  media: {
+    // A wide shot of the team or crew in front of the vehicles works best.
+    teamPhoto: "", // e.g. "/team.jpg"
+    teamPhotoAlt:
+      "The Manitoba Lock & Safe technicians outside the Winnipeg shop",
+  },
 } as const;
+
+/** Single-line address, used for maps links and directions. */
+export const fullAddress = site.address.hasStorefront
+  ? `${site.address.street}, ${site.address.locality}, ${site.address.region} ${site.address.postalCode}`
+  : `${site.address.locality}, ${site.address.region}`;
+
+/** Google Maps embed (no API key required). */
+export const mapEmbedUrl = `https://www.google.com/maps?q=${encodeURIComponent(
+  `${site.name}, ${fullAddress}`,
+)}&output=embed`;
+
+/** Opens turn-by-turn directions from the visitor's current location. */
+export const directionsUrl = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(
+  fullAddress,
+)}`;
 
 export const credentials = [
   {

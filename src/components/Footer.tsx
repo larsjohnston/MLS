@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Logo } from "./Logo";
 import { Icon } from "./Icon";
-import { site } from "@/data/site";
+import { site, directionsUrl } from "@/data/site";
 import { services } from "@/data/services";
 import { industries } from "@/data/industries";
 import { winnipegLocations, manitobaLocations } from "@/data/locations";
@@ -40,6 +40,15 @@ export function Footer() {
                     <br />
                     {site.address.locality}, {site.address.region}{" "}
                     {site.address.postalCode}
+                    <br />
+                    <a
+                      href={directionsUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-semibold text-white underline hover:text-blue-100"
+                    >
+                      Get directions
+                    </a>
                   </span>
                 </p>
               )}
@@ -117,8 +126,13 @@ export function Footer() {
 
       <div className="border-t border-white/10">
         <div className="mx-auto flex max-w-7xl flex-col gap-3 px-6 py-6 text-xs sm:flex-row sm:items-center sm:justify-between">
-          <p>
-            © {year} {site.legalName}. All rights reserved.
+          <p className="flex flex-wrap items-center gap-x-3 gap-y-1">
+            <span>
+              © {year} {site.legalName}. All rights reserved.
+            </span>
+            <Link href="/privacy" className="underline hover:text-white">
+              Privacy Policy
+            </Link>
           </p>
           <p className="text-silver-500">
             Licensed Manitoba security business · Bonded &amp; insured · ALOA

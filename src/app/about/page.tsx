@@ -2,6 +2,7 @@ import Link from "next/link";
 import { site, clients, brands } from "@/data/site";
 import { PageHero } from "@/components/PageHero";
 import { Icon } from "@/components/Icon";
+import { TeamPhoto } from "@/components/TeamPhoto";
 import {
   CheckList,
   CredentialGrid,
@@ -138,6 +139,9 @@ export default function AboutPage() {
           title="Who turns up at your door"
           blurb="Every technician is a licensed, record-checked employee in a marked vehicle. We do not subcontract commercial work to unknown third parties."
         />
+        <div className="mx-auto mt-10 max-w-4xl">
+          <TeamPhoto />
+        </div>
         <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {[
             {

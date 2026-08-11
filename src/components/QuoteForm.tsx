@@ -1,5 +1,6 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { site } from "@/data/site";
 import { services } from "@/data/services";
@@ -20,6 +21,7 @@ export function QuoteForm({
 }) {
   const [status, setStatus] = useState<Status>("idle");
   const [error, setError] = useState("");
+  const router = useRouter();
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -62,8 +64,10 @@ export function QuoteForm({
         body: JSON.stringify(data),
       });
       if (!res.ok) throw new Error(`Request failed (${res.status})`);
-      setStatus("sent");
       form.reset();
+      // A dedicated thank-you page gives you a clean conversion goal to track
+      // in Google Analytics, which an inline success message cannot.
+      router.push("/thank-you");
     } catch (err) {
       setStatus("error");
       setError(err instanceof Error ? err.message : "Something went wrong.");
