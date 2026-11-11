@@ -168,12 +168,6 @@ export default function AboutPage() {
             </div>
           ))}
         </div>
-        <p className="mt-8 text-sm text-silver-500">
-          Interested in joining us?{" "}
-          <Link href="/careers" className="font-semibold text-blue-600 hover:underline">
-            See open positions →
-          </Link>
-        </p>
       </Section>
 
       <Section>

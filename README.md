@@ -69,10 +69,10 @@ membership (CRL/CPL/CJIL), Manitoba Locksmith Association, WCB in good standing,
 BBB accreditation, and factory certification for Medeco / Mul-T-Lock /
 ASSA Abloy / Schlage. Confirm each is current and remove any that is not.
 
-### 6. Careers listings — `src/app/careers/page.tsx`
+### 6. Careers
 
-Three representative roles are listed. Remove any position you are not actively
-hiring for, and adjust the benefits list to match what you actually offer.
+There is no careers page — the business is not hiring. Add one back under
+`src/app/careers/` if that changes.
 
 ### 7. Team photo and other photography
 
@@ -131,7 +131,7 @@ to match if the mark changes.
 | `/service-areas` + `/service-areas/[slug]` | 18 | 13 Winnipeg areas + 4 surrounding communities |
 | `/case-studies` + `/case-studies/[slug]` | 6 | 5 named clients |
 | `/blog` + `/blog/[slug]` | 7 | 6 long-form articles |
-| `/about`, `/contact`, `/faq`, `/careers` | 4 | |
+| `/about`, `/contact`, `/faq` | 3 | |
 | `/thank-you` | 1 | Post-submission conversion page (noindex) |
 | `/privacy` | 1 | PIPEDA-aligned privacy policy |
 | `/sitemap.xml`, `/robots.txt`, `/opengraph-image`, `404` | 4 | Generated |

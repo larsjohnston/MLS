@@ -17,7 +17,6 @@ const companyLinks = [
   { href: "/service-areas", label: "Service Areas" },
   { href: "/faq", label: "FAQ" },
   { href: "/blog", label: "Resources" },
-  { href: "/careers", label: "Careers" },
 ];
 
 export function Header() {

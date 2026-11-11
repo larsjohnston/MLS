@@ -115,7 +115,6 @@ export function Footer() {
               <FooterLink href="/case-studies">Case Studies</FooterLink>
               <FooterLink href="/blog">Resources</FooterLink>
               <FooterLink href="/faq">FAQ</FooterLink>
-              <FooterLink href="/careers">Careers</FooterLink>
               <FooterLink href="/contact">Contact</FooterLink>
             </ul>
           </div>
