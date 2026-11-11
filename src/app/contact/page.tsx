@@ -8,9 +8,9 @@ import { JsonLd, pageMeta } from "@/lib/seo";
 import { breadcrumbSchema } from "@/components/Breadcrumbs";
 
 export const metadata = pageMeta({
-  title: "Contact | 24/7 Commercial Locksmith Winnipeg",
+  title: "Contact | Mobile Locksmith Winnipeg",
   description:
-    "Contact Manitoba Lock & Safe for commercial locksmith service in Winnipeg and across Manitoba. 24/7 emergency dispatch, or request a written quote for planned work.",
+    "Contact Manitoba Lock & Safe for mobile locksmith service in Winnipeg and surrounding communities. Call 431.485.4498 Monday to Friday, 8 to 5, or request a written quote.",
   path: "/contact",
 });
 
@@ -22,10 +22,10 @@ export default function ContactPage() {
       <JsonLd data={breadcrumbSchema(crumbs)} />
       <PageHero
         eyebrow="Contact us"
-        title="Call for emergencies. Write for everything else."
-        blurb="Emergency lockouts, break-ins and failed hardware are answered around the clock. Planned work is scoped, quoted in writing and scheduled around your operating hours."
+        title="Call us, or send the details. We come to you."
+        blurb="We are a mobile locksmith, so there is no shop to visit — our technicians come to your business, home or vehicle. Work is scoped, quoted in writing and booked Monday to Friday."
         crumbs={crumbs}
-        badges={["Answered 24/7", "Quotes within one business day", "All of Manitoba"]}
+        badges={["Mon–Fri, 8–5", "Quotes within one business day", "Winnipeg & area"]}
       />
       <TrustBar />
 
@@ -35,7 +35,7 @@ export default function ContactPage() {
             <SectionHeading
               eyebrow="Get in touch"
               title="How to reach us"
-              blurb="For anything urgent, call. It is always faster than a form, and the person answering can dispatch a technician while you are still on the line."
+              blurb="For anything urgent, call during business hours — it is always faster than a form. For quotes and planned work, the form or an email works well."
             />
 
             <div className="mt-8 space-y-4">
@@ -46,13 +46,13 @@ export default function ContactPage() {
                 <Icon name="phone" className="mt-0.5 h-6 w-6 shrink-0 text-red-600" />
                 <span>
                   <span className="block font-display text-xs font-bold uppercase tracking-[0.18em] text-red-600">
-                    24/7 emergency dispatch
+                    Call us · {site.hours.short}
                   </span>
                   <span className="mt-1 block font-display text-2xl font-extrabold text-navy-900">
                     {site.phone.display}
                   </span>
                   <span className="mt-1 block text-sm text-silver-500">
-                    Answered by a locksmith, day or night, every day of the year.
+                    Monday to Friday, 8 a.m. to 5 p.m.
                   </span>
                 </span>
               </a>
@@ -103,12 +103,10 @@ export default function ContactPage() {
                     Hours
                   </p>
                   <p className="mt-1 text-silver-500">
-                    <strong className="text-navy-900">Office:</strong>{" "}
                     {site.hours.office}
                   </p>
                   <p className="text-silver-500">
-                    <strong className="text-navy-900">Emergency:</strong>{" "}
-                    {site.hours.emergency}
+                    Mobile service only — we come to you.
                   </p>
                 </div>
               </div>
@@ -179,7 +177,7 @@ export default function ContactPage() {
         <SectionHeading
           eyebrow="Coverage"
           title="Where we work"
-          blurb="24/7 emergency response across Winnipeg and the capital region, with scheduled service days across the rest of Manitoba."
+          blurb="Mobile service across Winnipeg and the communities around it."
         />
         <div className="mt-8 grid gap-8 lg:grid-cols-2">
           <div>

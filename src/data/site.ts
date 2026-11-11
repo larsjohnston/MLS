@@ -9,41 +9,39 @@
 export const site = {
   name: "Manitoba Lock & Safe",
   legalName: "Manitoba Lock & Safe",
-  tagline: "Winnipeg's Fastest Locksmith",
-  founded: 2012,
+  tagline: "Winnipeg's Trusted Locksmiths Since 1984",
+  founded: 1984,
   domain: "manitobalock.com",
   url: "https://manitobalock.com",
 
-  // TODO: replace with the real business phone number.
   phone: {
-    display: "(204) 555-0100",
-    href: "tel:+12045550100",
-    e164: "+12045550100",
+    display: "431.485.4498",
+    href: "tel:+14314854498",
+    e164: "+14314854498",
   },
 
-  // TODO: replace with the real dispatch email.
-  email: "dispatch@manitobalock.com",
+  email: "max@manitobalock.com",
 
-  // TODO: replace with the real shop address, or set `hasStorefront: false`
-  //       if the business runs mobile-only.
+  // Mobile-only business: technicians come to the customer, so no street
+  // address is shown anywhere. If a shop opens later, set `hasStorefront: true`
+  // and fill in `street` and `postalCode`.
   address: {
-    hasStorefront: true,
-    street: "000 Example Street",
+    hasStorefront: false as boolean,
+    street: "",
     locality: "Winnipeg",
     region: "MB",
-    postalCode: "R0R 0R0",
+    postalCode: "",
     country: "CA",
   },
 
-  // TODO: confirm hours. The site currently advertises 24/7 emergency service.
   hours: {
     office: "Monday – Friday, 8:00 a.m. – 5:00 p.m.",
-    emergency: "24 hours a day, 7 days a week, 365 days a year",
-    emergencyAlwaysOpen: true,
+    short: "Mon–Fri, 8–5",
+    opens: "08:00",
+    closes: "17:00",
   },
 
-  // Approximate coordinates for downtown Winnipeg. TODO: replace with the
-  // shop's real latitude/longitude once the address is confirmed.
+  // Approximate coordinates for central Winnipeg (mobile service, no shop).
   geo: {
     latitude: 49.8951,
     longitude: -97.1384,
@@ -51,7 +49,7 @@ export const site = {
 
   serviceArea: {
     primary: "Winnipeg, Manitoba",
-    scope: "All of Manitoba",
+    scope: "Winnipeg and surrounding communities",
   },
 
   // TODO: add real profile URLs, then they will appear in the footer and in
@@ -72,8 +70,10 @@ export const site = {
   media: {
     // A wide shot of the team or crew in front of the vehicles works best.
     teamPhoto: "", // e.g. "/team.jpg"
-    teamPhotoAlt:
-      "The Manitoba Lock & Safe technicians outside the Winnipeg shop",
+    teamPhotoAlt: "The Manitoba Lock & Safe technicians with a service van",
+    // A side-on shot of a service van. Shown on the homepage.
+    vanPhoto: "", // e.g. "/van.jpg"
+    vanPhotoAlt: "A Manitoba Lock & Safe mobile service van",
   },
 } as const;
 
@@ -152,8 +152,8 @@ export const clients = [
 ];
 
 export const stats = [
-  { value: "2012", label: "Serving Manitoba since" },
-  { value: "30 min", label: "Average Winnipeg response time" },
-  { value: "24/7", label: "Emergency commercial dispatch" },
+  { value: String(1984), label: "Serving Winnipeg since" },
+  { value: "Mobile", label: "We come to you" },
+  { value: "Mon–Fri", label: "8 a.m. – 5 p.m." },
   { value: "100%", label: "Bonded, insured & licensed" },
 ];

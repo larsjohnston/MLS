@@ -24,7 +24,7 @@ export type Testimonial = {
 export const testimonials: Testimonial[] = [
   {
     quote:
-      "Called at 4 a.m. when our walk-in cooler lock failed and we could not get to the morning prep. A technician was on site inside half an hour and had it working before the kitchen arrived.",
+      "Called first thing in the morning when our walk-in cooler lock failed and we could not get to the prep. A technician came out that morning and had it working before lunch service.",
     name: "[Name]",
     role: "General Manager",
     org: "[Restaurant name]",
@@ -40,7 +40,7 @@ export const testimonials: Testimonial[] = [
   },
   {
     quote:
-      "We had a break-in on a Sunday night. They secured the door within the hour, came back Monday to repair the frame properly, and gave us documentation our insurer accepted without a single question.",
+      "We had a break-in over the weekend. They came out Monday, secured the door, repaired the frame properly, and gave us documentation our insurer accepted without a single question.",
     name: "[Name]",
     role: "Owner",
     org: "[Retail business]",

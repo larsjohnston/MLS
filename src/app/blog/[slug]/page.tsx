@@ -106,8 +106,8 @@ export default async function PostPage({
               Need this looked at?
             </h2>
             <p className="mt-2 text-navy-800/85">
-              We serve commercial clients across Winnipeg and all of Manitoba,
-              with 24/7 emergency dispatch and written quotes for planned work.
+              We serve businesses and homeowners in Winnipeg and surrounding communities,
+              with mobile service Monday to Friday and written quotes before work starts.
             </p>
             <div className="mt-5 flex flex-col gap-3 sm:flex-row">
               <Link

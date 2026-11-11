@@ -129,10 +129,10 @@ export function QuoteButton({
 
 export function TrustBar() {
   const items = [
-    { icon: "clock", text: "24/7 emergency dispatch" },
+    { icon: "clock", text: "Monday – Friday, 8 – 5" },
     { icon: "shield", text: "Licensed, bonded & insured" },
     { icon: "award", text: "ALOA certified technicians" },
-    { icon: "truck", text: "All of Manitoba" },
+    { icon: "truck", text: "Mobile service — we come to you" },
   ];
   return (
     <div className="border-y border-silver-300 bg-silver-100">
@@ -185,8 +185,8 @@ export function CredentialGrid() {
 }
 
 export function CtaBand({
-  title = "Need a commercial locksmith in Winnipeg today?",
-  blurb = "Emergency calls are answered around the clock by a locksmith, not an answering service. Planned work is scoped in writing before anyone picks up a tool.",
+  title = "Need a locksmith in Winnipeg?",
+  blurb = "We are a mobile service, so we come to you — Monday to Friday, 8 to 5. Call to talk it through, or request a written quote before any work starts.",
 }: {
   title?: string;
   blurb?: string;

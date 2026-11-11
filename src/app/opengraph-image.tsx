@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 import { site } from "@/data/site";
 
 export const alt =
-  "Manitoba Lock & Safe — commercial locksmith serving Winnipeg and all of Manitoba";
+  "Manitoba Lock & Safe — locksmith serving Winnipeg and surrounding communities";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -107,7 +107,7 @@ export default function OpengraphImage() {
           }}
         >
           <span style={{ fontSize: 30, color: "#ffffff", fontWeight: 700 }}>
-            24/7 emergency dispatch · {site.phone.display}
+            Mobile service · {site.phone.display}
           </span>
           <span style={{ fontSize: 28, color: "#8E9090" }}>{site.domain}</span>
         </div>

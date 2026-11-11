@@ -12,7 +12,7 @@ export const localBusinessSchema = {
   name: site.name,
   legalName: site.legalName,
   description:
-    "Commercial locksmith serving Winnipeg and all of Manitoba — 24/7 emergency lockouts, master key systems, access control, high-security locks, safes and door hardware.",
+    "Mobile locksmith serving Winnipeg and surrounding communities since 1984 — locks and keys, rekeying, master key systems, access control, door repair, automatic doors, safes and vaults for businesses, homes and vehicles.",
   url: site.url,
   telephone: site.phone.e164,
   email: site.email,
@@ -54,22 +54,19 @@ export const localBusinessSchema = {
         "Wednesday",
         "Thursday",
         "Friday",
-        "Saturday",
-        "Sunday",
       ],
-      opens: "00:00",
-      closes: "23:59",
-      description: "24/7 emergency commercial locksmith dispatch",
+      opens: site.hours.opens,
+      closes: site.hours.closes,
     },
   ],
   areaServed: [
-    { "@type": "State", name: "Manitoba" },
+    { "@type": "City", name: "Winnipeg" },
     ...locations.map((l) => ({ "@type": "Place", name: l.name })),
   ],
   brand: brands.map((b) => ({ "@type": "Brand", name: b })),
   hasOfferCatalog: {
     "@type": "OfferCatalog",
-    name: "Commercial locksmith services",
+    name: "Locksmith services",
     itemListElement: services.map((s) => ({
       "@type": "Offer",
       itemOffered: {
@@ -107,7 +104,7 @@ export function serviceSchema(s: {
     provider: { "@id": `${site.url}/#business` },
     areaServed: [
       { "@type": "City", name: "Winnipeg" },
-      { "@type": "State", name: "Manitoba" },
+      { "@type": "City", name: "Winnipeg" },
     ],
     availableChannel: {
       "@type": "ServiceChannel",

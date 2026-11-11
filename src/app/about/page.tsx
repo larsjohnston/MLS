@@ -17,9 +17,9 @@ import { JsonLd, pageMeta } from "@/lib/seo";
 import { breadcrumbSchema } from "@/components/Breadcrumbs";
 
 export const metadata = pageMeta({
-  title: "About Us | Commercial Locksmith in Winnipeg Since 2012",
+  title: "About Us | Winnipeg Locksmiths Since 1984",
   description:
-    "Manitoba Lock & Safe has served Winnipeg and Manitoba businesses since 2012. Licensed, bonded and insured commercial locksmiths with ALOA certification and 24/7 emergency dispatch.",
+    "Manitoba Lock & Safe has served Winnipeg and surrounding communities since 1984. Licensed, bonded and insured mobile locksmiths for businesses, homes and vehicles.",
   path: "/about",
 });
 
@@ -31,23 +31,23 @@ export default function AboutPage() {
       <JsonLd data={breadcrumbSchema(crumbs)} />
       <PageHero
         eyebrow={`Since ${site.founded}`}
-        title="Winnipeg's commercial locksmith"
-        blurb={`${site.tagline} — and the one Manitoba's largest facilities call when the work has to be right the first time.`}
+        title="Winnipeg's locksmiths since 1984"
+        blurb="A mobile locksmith service for businesses, homes and vehicles — we bring the workshop to your door, and we do the work properly the first time."
         crumbs={crumbs}
-        badges={["Founded 2012", "Commercial specialists", "All of Manitoba"]}
+        badges={[`Founded ${site.founded}`, "Mobile service", "Winnipeg & area"]}
       />
       <TrustBar />
 
       <Section>
         <div className="grid gap-12 lg:grid-cols-[1.4fr_1fr]">
           <div>
-            <SectionHeading eyebrow="Our story" title="Built for commercial work, not adapted to it" />
+            <SectionHeading eyebrow="Our story" title="Protecting people and property since 1984" />
             <div className="mt-6">
               <Prose
                 paragraphs={[
-                  `Manitoba Lock & Safe opened in ${site.founded} with a deliberately narrow focus: commercial locksmithing. Not car keys, not alarm monitoring, not residential deadbolts on a Saturday afternoon. Commercial doors, commercial hardware and the systems that manage who gets through them.`,
-                  "That focus changes everything about how the business runs. Our trucks stock Grade 1 hardware, exit devices, closers and commercial cylinders, because that is what our calls need. Our technicians spend their days on mortise locksets, aluminium storefront and access control rather than encountering them occasionally. Our dispatchers are locksmiths, so when you describe a door over the phone, the right parts are on the truck before it leaves.",
-                  "The result is a business that solves commercial problems on the first visit far more often than a general locksmith can — and one that thinks past the immediate call to the key system, the documentation and the next three years of the building's life.",
+                  `Manitoba Lock & Safe has been looking after locks, doors, keys and safes since ${site.founded}. We are a mobile service: there is no shop to find and no counter to queue at. A technician comes to your business, your home or your vehicle with the tools and hardware on the van.`,
+                  "Much of our work is commercial — master key systems, access control, exit hardware, automatic doors, door and frame repair, safes — so our vans carry Grade 1 hardware, closers and commercial cylinders alongside the deadbolts and keys a home needs. When you describe a door over the phone, we aim to have the right parts on the van before it leaves.",
+                  "The aim is simple: fix the problem on the first visit where we can, and think past the immediate call to the key system, the paperwork and the next few years of the building's life.",
                 ]}
               />
             </div>
@@ -61,7 +61,7 @@ export default function AboutPage() {
                   "Non-destructive first. Drilling a lock is a failure of technique, not a first resort.",
                   "Specify honestly. If a door does not need the expensive answer, we will say so — and we will explain which doors do.",
                   "Document everything. A key system nobody has written down is a liability waiting for the day the person who understood it is unavailable.",
-                  "Price before the work. You approve a number before a tool comes out, including on emergency calls.",
+                  "Price before the work. You approve a number before a tool comes out.",
                   "Fix the cause. Most 'broken locks' are doors, frames or closers. Replacing the lockset just books the return visit.",
                 ]}
               />
@@ -76,11 +76,10 @@ export default function AboutPage() {
               <dl className="mt-4 space-y-3 text-sm">
                 {[
                   ["Founded", String(site.founded)],
-                  ["Focus", "Commercial locksmithing"],
-                  ["Head office", `${site.address.locality}, ${site.address.region}`],
+                  ["Focus", "Business, home & auto"],
+                  ["Based in", `${site.address.locality}, ${site.address.region} (mobile only)`],
                   ["Coverage", site.serviceArea.scope],
-                  ["Emergency", site.hours.emergency],
-                  ["Office hours", site.hours.office],
+                  ["Hours", site.hours.office],
                 ].map(([k, v]) => (
                   <div key={k} className="flex justify-between gap-4 border-b border-silver-300 pb-3">
                     <dt className="font-semibold text-navy-900">{k}</dt>

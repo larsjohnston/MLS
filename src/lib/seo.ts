@@ -25,7 +25,7 @@ export function pageMeta({
     url: `${site.url}/opengraph-image`,
     width: 1200,
     height: 630,
-    alt: `${site.name} — commercial locksmith serving Winnipeg and all of Manitoba`,
+    alt: `${site.name} — locksmith serving Winnipeg and surrounding communities`,
   };
 
   return {

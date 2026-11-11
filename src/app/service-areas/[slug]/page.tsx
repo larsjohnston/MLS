@@ -74,7 +74,7 @@ export default async function LocationPage({
         title={`Commercial locksmith in ${location.name}`}
         blurb={location.summary}
         crumbs={crumbs}
-        badges={[location.responseTime, "Licensed, bonded & insured", "Commercial specialists"]}
+        badges={["Mobile service", "Licensed, bonded & insured", site.hours.short]}
       />
       <TrustBar />
 
@@ -114,14 +114,14 @@ export default async function LocationPage({
             <div className="mb-6 rounded-2xl border border-navy-800 bg-navy-900 p-6 text-white">
               <p className="flex items-center gap-2 font-display text-sm font-bold uppercase tracking-[0.18em] text-blue-500">
                 <Icon name="clock" className="h-4 w-4" />
-                Response time
+                Service hours
               </p>
               <p className="mt-2 font-display text-2xl font-extrabold">
-                {location.responseTime}
+                {site.hours.short}
               </p>
               <p className="mt-2 text-sm text-silver-300">
-                Emergency dispatch is answered 24 hours a day. We give you a
-                realistic window before a truck is assigned.
+                We are a mobile service, so we come to you. Call and we will
+                give you a realistic time before a van is booked.
               </p>
               <a
                 href={site.phone.href}
@@ -187,7 +187,7 @@ export default async function LocationPage({
 
       <CtaBand
         title={`Need a commercial locksmith in ${location.name}?`}
-        blurb="Call for immediate dispatch, or request a written quote for planned work."
+        blurb="Call us Monday to Friday, 8 to 5, or request a written quote for planned work."
       />
     </>
   );

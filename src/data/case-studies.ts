@@ -50,7 +50,6 @@ export const caseStudies: CaseStudy[] = [
       "High-cycle exit device and door closer service on public-facing openings",
       "Key system administration and controlled key issuing",
       "Scheduled attendance planned around operational windows and site security procedures",
-      "24/7 emergency response availability",
     ],
     outcome: [
       "A commercial locksmith relationship built around an operation that does not stop, with work sequenced so that openings stay in service and site security procedures are followed as a matter of routine rather than negotiation.",
@@ -71,7 +70,7 @@ export const caseStudies: CaseStudy[] = [
       "Access management for a major event venue where the population of the building changes completely from one week to the next.",
     metaTitle: "Case Study: Winnipeg Convention Centre | Manitoba Lock & Safe",
     metaDescription:
-      "How Manitoba Lock & Safe supports the Winnipeg Convention Centre with event venue access control, high-traffic hardware service and emergency response in downtown Winnipeg.",
+      "How Manitoba Lock & Safe supports the Winnipeg Convention Centre with event venue access control, high-traffic hardware service and key system administration in downtown Winnipeg.",
     challenge: [
       "A convention centre reconfigures itself constantly. Exhibitors, contractors, caterers, promoters and thousands of attendees move through the building for an event and are gone by the following week, replaced by an entirely different group with entirely different access needs.",
       "That churn sits on top of permanent requirements: back-of-house and kitchen security, office and administrative areas, storage for high-value AV equipment, and egress hardware on assembly-occupancy doors that has to be beyond question every single day.",
@@ -81,7 +80,6 @@ export const caseStudies: CaseStudy[] = [
       "Back-of-house, storage and administrative area access management",
       "Key system administration for permanent staff, contractors and event vendors",
       "Hardware repair scheduled between events and around load-in windows",
-      "Emergency response during events and outside business hours",
     ],
     outcome: [
       "Event-driven access handled as a routine operating rhythm rather than a recurring scramble, with life-safety hardware maintained to the standard an assembly occupancy demands.",
@@ -90,7 +88,7 @@ export const caseStudies: CaseStudy[] = [
       "panic-bars-exit-devices-winnipeg",
       "access-control-systems-winnipeg",
       "master-key-systems-winnipeg",
-      "emergency-commercial-lockout-winnipeg",
+      "commercial-lockout-service-winnipeg",
     ],
   },
   {
@@ -143,7 +141,7 @@ export const caseStudies: CaseStudy[] = [
       "Back-of-house, liquor room and office access control",
       "Deposit safe service, combination changes and cash-handling security",
       "Rear exit door hardware, closers and door prop alarms",
-      "Work scheduled between services or overnight to protect trading hours",
+      "Work scheduled between services to protect trading hours",
     ],
     outcome: [
       "Security changes that keep pace with restaurant staffing, delivered inside the operating windows the business actually has rather than against them.",
@@ -161,10 +159,10 @@ export const caseStudies: CaseStudy[] = [
     sector: "Restaurants & Hospitality",
     location: "Winnipeg, MB",
     summary:
-      "High-traffic restaurant hardware, controlled inventory storage and emergency response that arrives before service is affected.",
+      "High-traffic restaurant hardware, controlled inventory storage and repairs handled before service is affected.",
     metaTitle: "Case Study: Earls Restaurants | Manitoba Lock & Safe",
     metaDescription:
-      "How Manitoba Lock & Safe supports Earls Restaurants in Winnipeg with high-traffic door hardware, liquor and stock room access control, safe service and 24/7 emergency response.",
+      "How Manitoba Lock & Safe supports Earls Restaurants in Winnipeg with high-traffic door hardware, liquor and stock room access control, safe service and lockout calls.",
     challenge: [
       "A busy restaurant cycles its doors thousands of times a week, and every one of those cycles lands on hardware that also has to satisfy egress requirements. Closers drift, latches wear, and back doors get propped on hot nights by staff who need airflow more than they need a security policy.",
       "Inventory control runs in parallel. Liquor, dry storage and walk-in access are where shrink shows up, and a key-based approach cannot tell you who opened what.",
@@ -174,16 +172,16 @@ export const caseStudies: CaseStudy[] = [
       "Liquor room, stock room and walk-in access control with audit trails",
       "Staff turnover rekeys and credential revocation",
       "Deposit safe supply, service and combination management",
-      "24/7 emergency lockout and hardware failure response",
+      "Lockout and hardware failure calls",
     ],
     outcome: [
-      "Door hardware maintained ahead of failure instead of after it, and inventory access recorded rather than assumed — with emergency cover for the nights when something goes wrong anyway.",
+      "Door hardware maintained ahead of failure instead of after it, and inventory access recorded rather than assumed.",
     ],
     services: [
       "panic-bars-exit-devices-winnipeg",
       "access-control-systems-winnipeg",
       "commercial-rekeying-winnipeg",
-      "emergency-commercial-lockout-winnipeg",
+      "commercial-lockout-service-winnipeg",
     ],
   },
 ];

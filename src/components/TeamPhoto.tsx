@@ -18,8 +18,8 @@ export function TeamPhoto() {
           Team photo goes here
         </p>
         <p className="mt-1 max-w-md text-sm text-silver-500">
-          A real photo of the crew in front of the vehicles outperforms stock
-          imagery on every trust metric there is. Add the file to{" "}
+          A real photo of the crew with the vans builds more trust than stock
+          imagery. Add the file to{" "}
           <code className="rounded bg-white px-1.5 py-0.5 text-xs">/public</code>{" "}
           and set{" "}
           <code className="rounded bg-white px-1.5 py-0.5 text-xs">

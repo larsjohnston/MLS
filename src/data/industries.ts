@@ -23,7 +23,7 @@ export const industries: Industry[] = [
       "Portfolio-wide key control, tenant turnover rekeys and one invoice trail your owners can actually audit.",
     metaTitle: "Locksmith for Property Managers Winnipeg | Manitoba Lock & Safe",
     metaDescription:
-      "Commercial locksmith services for Winnipeg property managers. Tenant turnover rekeys, master key systems, access control and 24/7 emergency response across your whole portfolio.",
+      "Commercial locksmith services for Winnipeg property managers. Tenant turnover rekeys, master key systems, access control and lockout service across your whole portfolio.",
     heroHeading: "Locksmith services built for a portfolio, not a single door",
     intro: [
       "Property managers do not have a lock problem, they have a scale problem. Twenty buildings, hundreds of doors, constant tenant churn, contractors who need access on Tuesdays only, and an owner who wants to know why the maintenance line item moved. Manitoba Lock & Safe works the way your portfolio works — standardised hardware, documented key systems and invoicing that reconciles cleanly against each property.",
@@ -43,8 +43,8 @@ export const industries: Industry[] = [
         body: "Inherited buildings audited and charted, so you know what your keys open before an incident tells you.",
       },
       {
-        title: "After-hours emergencies",
-        body: "24/7 dispatch for lockouts, break-ins and failed hardware, with a technician who can act without waiting for approvals.",
+        title: "Lockouts and failed hardware",
+        body: "Lockouts, break-in repairs and failed hardware handled during business hours, Monday to Friday, by a technician who already knows the building.",
       },
       {
         title: "Owner-ready documentation",
@@ -55,7 +55,7 @@ export const industries: Industry[] = [
       "commercial-rekeying-winnipeg",
       "master-key-systems-winnipeg",
       "access-control-systems-winnipeg",
-      "emergency-commercial-lockout-winnipeg",
+      "commercial-lockout-service-winnipeg",
       "door-frame-storefront-repair-winnipeg",
     ],
     faqs: [
@@ -69,7 +69,7 @@ export const industries: Industry[] = [
       },
       {
         q: "How fast can you turn around a suite rekey?",
-        a: "Same-day in most of Winnipeg when the request comes in the morning. For scheduled turnovers, tell us the date and we will book it in advance.",
+        a: "Call us with the unit and we will book the earliest available visit, Monday to Friday. For scheduled turnovers, tell us the date and we will book it in advance.",
       },
     ],
   },
@@ -83,7 +83,7 @@ export const industries: Industry[] = [
       "Apartment and condo buildings: suite turnover, common-area access, mailboxes and fob systems that survive constant resident churn.",
     metaTitle: "Apartment & Condo Locksmith Winnipeg | Multifamily Security",
     metaDescription:
-      "Multifamily locksmith services in Winnipeg. Suite rekeys, common-area master keying, fob and intercom access control, mailbox locks and 24/7 emergency response for apartments and condos.",
+      "Multifamily locksmith services in Winnipeg. Suite rekeys, common-area master keying, fob and intercom access control, mailbox locks and lockout service for apartments and condos.",
     heroHeading: "Apartment and condo security that keeps up with turnover",
     intro: [
       "A multifamily building is the hardest key-control environment there is. Residents come and go monthly, every suite has its own cylinder, common areas need contractor and staff access, and the one thing you can never say to a resident is that their old key might still work. Manitoba Lock & Safe keeps apartment and condo buildings across Winnipeg on documented systems that hold up through years of churn.",
@@ -100,7 +100,7 @@ export const industries: Industry[] = [
       },
       {
         title: "Lost fobs and resident lockouts",
-        body: "Fobs revoked instantly and reissued, and after-hours resident lockouts handled without dragging your caretaker out of bed.",
+        body: "Fobs revoked instantly and reissued, and resident lockouts handled during business hours without tying up your caretaker.",
       },
       {
         title: "Mailbox and locker banks",
@@ -116,7 +116,7 @@ export const industries: Industry[] = [
       "master-key-systems-winnipeg",
       "access-control-systems-winnipeg",
       "file-cabinet-desk-locks-winnipeg",
-      "emergency-commercial-lockout-winnipeg",
+      "commercial-lockout-service-winnipeg",
     ],
     faqs: [
       {
@@ -140,14 +140,14 @@ export const industries: Industry[] = [
     shortName: "Retail",
     icon: "store",
     summary:
-      "Storefront hardware, cash-handling safes, loss-prevention exit control and break-in response that gets you trading again the same day.",
+      "Storefront hardware, cash-handling safes, loss-prevention exit control and break-in repair that gets you trading again.",
     metaTitle: "Retail Locksmith Winnipeg | Storefront & Shop Security",
     metaDescription:
-      "Retail locksmith services in Winnipeg. Aluminium storefront door repair, deposit safes, delayed egress and exit alarms, rekeying and 24/7 break-in response for shops and shopping centres.",
+      "Retail locksmith services in Winnipeg. Aluminium storefront door repair, deposit safes, delayed egress and exit alarms, rekeying and break-in repair for shops and shopping centres.",
     heroHeading: "Retail security that protects margin, not just merchandise",
     intro: [
       "Retail is unforgiving about downtime. A door that will not lock means somebody stays overnight; a door that will not open means the store does not open. We keep Winnipeg retailers trading — aluminium storefront hardware repaired, deposit safes specified for the float, exit doors controlled so the fire exit is not also the theft exit.",
-      "We also respond to break-ins, which in retail arrive at three in the morning and need to be resolved by opening. Emergency securing, frame repair, hardware replacement and the itemised documentation your insurer will demand, handled as one job rather than four separate trades.",
+      "We also repair the damage after a break-in. Securing the opening, frame repair, hardware replacement and the itemised documentation your insurer will demand, handled as one job rather than four separate trades.",
     ],
     challenges: [
       {
@@ -168,7 +168,7 @@ export const industries: Industry[] = [
       },
       {
         title: "Break-in recovery",
-        body: "Overnight securing and same-day permanent repair, documented for insurance.",
+        body: "The opening secured and permanently repaired, documented for insurance.",
       },
     ],
     services: [
@@ -176,7 +176,7 @@ export const industries: Industry[] = [
       "safe-opening-service-winnipeg",
       "panic-bars-exit-devices-winnipeg",
       "commercial-rekeying-winnipeg",
-      "emergency-commercial-lockout-winnipeg",
+      "commercial-lockout-service-winnipeg",
     ],
     faqs: [
       {
@@ -188,8 +188,8 @@ export const industries: Industry[] = [
         a: "A deposit safe with a drop slot and time-delay lock. Check your insurance policy first — many specify a minimum rating, and buying under it can void your coverage on a claim.",
       },
       {
-        q: "How fast can you respond to a break-in?",
-        a: "Immediately, day or night. Securing the opening comes first so you can trade, with permanent repair scheduled right behind it.",
+        q: "Do you repair doors after a break-in?",
+        a: "Yes. Call us during business hours, Monday to Friday. Securing the opening comes first so you can trade, with permanent repair scheduled right behind it.",
       },
     ],
   },
@@ -203,11 +203,11 @@ export const industries: Industry[] = [
       "Tenant suites, common areas and server rooms under one coherent access plan, with audit trails where they matter.",
     metaTitle: "Office Building Locksmith Winnipeg | Commercial Access Control",
     metaDescription:
-      "Office building locksmith services in Winnipeg. Master key systems, tenant suite rekeys, access control with audit trails, server room security and 24/7 emergency response.",
+      "Office building locksmith services in Winnipeg. Master key systems, tenant suite rekeys, access control with audit trails, server room security and lockout service.",
     heroHeading: "Office access that scales from one suite to a whole tower",
     intro: [
       "Office buildings run on layered access: the public gets the lobby, tenants get their floor, staff get their suite, cleaners get everything after hours but nothing during the day, and IT gets the server room alone. Manitoba Lock & Safe designs and maintains that hierarchy for Winnipeg office buildings, mechanically, electronically, or the sensible combination of both.",
-      "We work around tenants rather than through them. Rekeys and installations are scheduled evenings and weekends where they would disrupt business, and every change is documented so the building's access plan stays intelligible when your facilities lead changes jobs.",
+      "We plan work with tenants rather than through them. Rekeys and installations are booked ahead to minimise disruption, and every change is documented so the building's access plan stays intelligible when your facilities lead changes jobs.",
     ],
     challenges: [
       {
@@ -240,8 +240,8 @@ export const industries: Industry[] = [
     ],
     faqs: [
       {
-        q: "Can you work outside business hours so tenants are not disturbed?",
-        a: "Yes, and for most office work we recommend it. Evening and weekend scheduling is standard for us on occupied buildings.",
+        q: "Can you keep disruption to tenants down?",
+        a: "Yes. We work Monday to Friday, 8 a.m. to 5 p.m., so occupied-building work is booked ahead, sequenced suite by suite and coordinated with tenants so nobody is caught off guard.",
       },
       {
         q: "Should we go fully electronic?",
@@ -263,11 +263,11 @@ export const industries: Industry[] = [
       "Yards, docks, overhead doors, gates and high-value inventory secured against theft — in hardware built for cold and abuse.",
     metaTitle: "Industrial & Warehouse Locksmith Winnipeg | Dock & Yard Security",
     metaDescription:
-      "Warehouse and industrial locksmith services in Winnipeg. Dock doors, gates, high-security padlocks, access control for shift workers and 24/7 emergency response across Manitoba.",
+      "Warehouse and industrial locksmith services in Winnipeg. Dock doors, gates, high-security padlocks, access control for shift workers and lockout service in Winnipeg and surrounding communities.",
     heroHeading: "Security for docks, yards and everything behind the fence",
     intro: [
       "Industrial sites fail at the perimeter — the yard gate, the dock door, the man door beside the overhead, the padlock on the trailer. Those are the points that see the most abuse, the most weather and the least attention, and they are exactly where theft happens. We secure the perimeter with hardware rated for the traffic and the Manitoba climate, not with whatever fit at the time.",
-      "Inside, we handle shift-based access, tool crib and parts cage control, and the key or credential management that a workforce running three shifts needs. Where an operation runs around the clock, we schedule work into the gaps rather than shutting a door your forklifts need.",
+      "Inside, we handle shift-based access, tool crib and parts cage control, and the key or credential management that a workforce running three shifts needs. Where an operation runs around the clock, we plan the work with you ahead of time rather than shutting a door your forklifts need.",
     ],
     challenges: [
       {
@@ -296,7 +296,7 @@ export const industries: Industry[] = [
       "high-security-locks-winnipeg",
       "commercial-lock-repair-installation-winnipeg",
       "door-frame-storefront-repair-winnipeg",
-      "emergency-commercial-lockout-winnipeg",
+      "commercial-lockout-service-winnipeg",
     ],
     faqs: [
       {
@@ -309,7 +309,7 @@ export const industries: Industry[] = [
       },
       {
         q: "Can you work around a 24-hour operation?",
-        a: "We schedule around production. Tell us the window where a door can be out of service and we will work in it, including overnight.",
+        a: "We plan with production. Our technicians work Monday to Friday, 8 a.m. to 5 p.m., so tell us the daytime window where a door can be out of service and we will book the work into it.",
       },
     ],
   },
@@ -323,7 +323,7 @@ export const industries: Industry[] = [
       "Back-of-house control, liquor and stock rooms, deposit safes and staff turnover handled without touching service hours.",
     metaTitle: "Restaurant Locksmith Winnipeg | Hospitality Security Services",
     metaDescription:
-      "Restaurant and hospitality locksmith services in Winnipeg. Back-of-house access control, liquor room security, deposit safes, staff turnover rekeys and 24/7 emergency response.",
+      "Restaurant and hospitality locksmith services in Winnipeg. Back-of-house access control, liquor room security, deposit safes, staff turnover rekeys and lockout service.",
     heroHeading: "Locksmith work that happens between services, not during them",
     intro: [
       "Restaurants have the highest staff turnover of any sector we serve and the least tolerance for downtime. A key walks out the door most months, the liquor room and the office are the two rooms that must stay controlled, and there is a two-hour window between lunch and dinner when work can happen without costing covers.",
@@ -356,12 +356,12 @@ export const industries: Industry[] = [
       "access-control-systems-winnipeg",
       "safe-opening-service-winnipeg",
       "panic-bars-exit-devices-winnipeg",
-      "emergency-commercial-lockout-winnipeg",
+      "commercial-lockout-service-winnipeg",
     ],
     faqs: [
       {
         q: "Can you work between lunch and dinner service?",
-        a: "That is our preferred window for restaurant work, and we book into it deliberately. Overnight is available where a job needs longer.",
+        a: "That is our preferred window for restaurant work, and we book into it deliberately. Longer jobs are planned with you ahead of time.",
       },
       {
         q: "How do we stop the liquor room walking?",
@@ -429,7 +429,7 @@ export const industries: Industry[] = [
       },
       {
         q: "Do your technicians work in occupied clinical space?",
-        a: "Yes. Our technicians are police-record checked, work around patient hours, and are used to clinical environments and privacy expectations.",
+        a: "Yes. Our technicians are police-record checked, work carefully around patients, and are used to clinical environments and privacy expectations.",
       },
     ],
   },
@@ -503,11 +503,11 @@ export const industries: Industry[] = [
       "Procurement-ready documentation, security clearances and hardware standards that satisfy public-sector requirements.",
     metaTitle: "Government & Municipal Locksmith Winnipeg | Public Sector Security",
     metaDescription:
-      "Locksmith services for government and municipal facilities in Winnipeg and Manitoba. Tendered work, high-security key control, access control, documented compliance and cleared technicians.",
+      "Locksmith services for government and municipal facilities in Winnipeg and surrounding communities. Tendered work, high-security key control, access control, documented compliance and cleared technicians.",
     heroHeading: "Public-sector locksmith work, documented to the standard required",
     intro: [
       "Public-sector work carries requirements that private clients rarely impose: competitive procurement, insurance and bonding thresholds, WCB clearance, cleared personnel, prescribed hardware standards and documentation that survives an access-to-information request. Manitoba Lock & Safe is set up to meet those requirements rather than to work around them.",
-      "We serve municipal buildings, provincial facilities, public works yards, community centres and libraries across Manitoba — from a single hardware repair on a purchase order through to a tendered building-wide access control installation, with the submittals, closeout documentation and as-built key charts each contract requires.",
+      "We serve municipal buildings, provincial facilities, public works yards, community centres and libraries in Winnipeg and surrounding communities — from a single hardware repair on a purchase order through to a tendered building-wide access control installation, with the submittals, closeout documentation and as-built key charts each contract requires.",
     ],
     challenges: [
       {

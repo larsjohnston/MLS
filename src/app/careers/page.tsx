@@ -84,7 +84,7 @@ export default function CareersPage() {
             <div className="mt-6">
               <Prose
                 paragraphs={[
-                  `Manitoba Lock & Safe has been commercial-only since ${site.founded}, and that shapes the work. You are not cutting house keys between calls — you are pinning master key systems, commissioning access control, rebuilding storefront hardware and solving problems that take actual expertise.`,
+                  `Manitoba Lock & Safe has been at this since ${site.founded}, and the work is varied. One day you are pinning a master key system or commissioning access control, the next you are rebuilding storefront hardware, servicing a safe or rekeying a home — problems that take actual expertise.`,
                   "We invest in the people doing that work: manufacturer training, ALOA certification support, a properly stocked company vehicle and the tools to do the job without improvising.",
                 ]}
               />
@@ -92,12 +92,11 @@ export default function CareersPage() {
             <div className="mt-8">
               <CheckList
                 items={[
-                  "Competitive wages reviewed annually, with overtime and on-call premiums",
+                  "Competitive wages reviewed annually",
                   "Company vehicle, fuel card, tools and uniforms provided",
                   "Paid training and support toward ALOA certification",
                   "Health benefits after the probationary period",
-                  "Rotating on-call schedule — shared fairly, not dumped on the newest hire",
-                  "A commercial-only book of work, so your skills compound instead of scattering",
+                  "Varied, skilled work, so you keep learning",
                 ]}
               />
             </div>
@@ -181,7 +180,7 @@ export default function CareersPage() {
 
       <CtaBand
         title="Not looking for a job — just need a locksmith?"
-        blurb="Call us for 24/7 emergency commercial service anywhere in Winnipeg, or request a quote for planned work."
+        blurb="Call us Monday to Friday, 8 to 5, or request a written quote for planned work."
       />
     </>
   );

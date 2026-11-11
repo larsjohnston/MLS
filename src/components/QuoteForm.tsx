@@ -11,7 +11,7 @@ type Status = "idle" | "sending" | "sent" | "error";
 export function QuoteForm({
   compact = false,
   defaultService = "",
-  heading = "Request a commercial quote",
+  heading = "Request a free quote",
   blurb = "Tell us about the doors and we will come back with a realistic scope and price. For anything urgent, call — the phone is always faster.",
 }: {
   compact?: boolean;
@@ -85,7 +85,7 @@ export function QuoteForm({
         </h3>
         <p className="mt-2 text-sm text-silver-500">
           We reply to quote requests within one business day. If this is urgent,
-          call us now and we will dispatch a technician.
+          call us during business hours ({site.hours.short}).
         </p>
         <a
           href={site.phone.href}
@@ -192,11 +192,11 @@ export function QuoteForm({
         </button>
 
         <p className="text-center text-xs text-silver-500">
-          Emergency? Call{" "}
+          In a hurry? Call{" "}
           <a href={site.phone.href} className="font-semibold text-red-600 underline">
             {site.phone.display}
           </a>{" "}
-          — answered 24/7.
+          — {site.hours.short}.
         </p>
       </form>
     </div>

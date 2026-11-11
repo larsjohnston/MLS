@@ -1,7 +1,7 @@
 export type Faq = { q: string; a: string; category: string };
 
 export const faqCategories = [
-  "Emergency Service",
+  "Lockouts & Urgent Calls",
   "Pricing & Scheduling",
   "Keys & Key Control",
   "Access Control",
@@ -10,38 +10,38 @@ export const faqCategories = [
 ];
 
 export const faqs: Faq[] = [
-  // Emergency Service
+  // Lockouts & Urgent Calls
   {
-    category: "Emergency Service",
-    q: "Are you really available 24 hours a day?",
-    a: "Yes. Emergency commercial dispatch runs 24 hours a day, seven days a week, including statutory holidays. Calls are answered by a person, not an answering service reading from a script, and our dispatchers are locksmiths who can tell you what to expect before a truck is assigned.",
+    category: "Lockouts & Urgent Calls",
+    q: "What are your hours?",
+    a: "We are open Monday to Friday, 8 a.m. to 5 p.m. Calls during those hours are answered by a person who can tell you what to expect before a truck is assigned. We do not run an after-hours service, so messages left outside those hours are returned the next business day.",
   },
   {
-    category: "Emergency Service",
+    category: "Lockouts & Urgent Calls",
     q: "How fast can you reach my business?",
-    a: "Inside Winnipeg, most emergency calls are reached within about 30 minutes. Communities just outside the Perimeter typically run 45 to 60 minutes. Regional Manitoba calls are quoted a realistic window before we dispatch — we would rather tell you two hours and arrive in ninety minutes than the reverse.",
+    a: "It depends on where you are and what is already booked that day. Lockouts and doors that will not secure are prioritised during business hours, Monday to Friday. When you call, we give you a realistic arrival window before we send a truck, rather than an optimistic one — and communities outside Winnipeg take longer to reach than addresses inside the Perimeter.",
   },
   {
-    category: "Emergency Service",
+    category: "Lockouts & Urgent Calls",
     q: "Will you damage my lock getting the door open?",
     a: "Rarely. We are non-destructive first on every lockout: picking, bypassing and decoding come before drilling. Drilling is a last resort, and when it is unavoidable we carry commercial-grade replacement hardware so the door is repaired on the same visit.",
   },
   {
-    category: "Emergency Service",
+    category: "Lockouts & Urgent Calls",
     q: "What do you need from me before you will open a door?",
     a: "Proof that you are entitled to access the premises — photo ID plus something connecting you to the property, such as a lease, business licence, utility bill, corporate ID or a signed property-management work order. This is a licensing requirement and we do not make exceptions to it.",
   },
   {
-    category: "Emergency Service",
+    category: "Lockouts & Urgent Calls",
     q: "Our building was broken into. What happens first?",
-    a: "We secure the opening so you can operate, then quote the permanent repair. Break-in calls are dispatched immediately at any hour, and you receive itemised documentation of the damage and the work performed for your insurance claim.",
+    a: "We secure the opening so you can operate, then quote the permanent repair. Break-in repairs are prioritised during our business hours, Monday to Friday, and you receive itemised documentation of the damage and the work performed for your insurance claim.",
   },
 
   // Pricing & Scheduling
   {
     category: "Pricing & Scheduling",
     q: "How do you charge?",
-    a: "A service call fee covers travel and diagnosis, then labour plus parts for the work itself. After-hours and holiday calls carry an emergency rate, which we state on the phone before dispatching. Larger projects are quoted as fixed-price work after a site visit.",
+    a: "A service call fee covers travel and diagnosis, then labour plus parts for the work itself. Larger projects are quoted as fixed-price work after a site visit.",
   },
   {
     category: "Pricing & Scheduling",
@@ -50,8 +50,8 @@ export const faqs: Faq[] = [
   },
   {
     category: "Pricing & Scheduling",
-    q: "Can you work outside business hours so we are not disrupted?",
-    a: "Yes, and for occupied buildings we usually recommend it. Evening, overnight and weekend scheduling is routine for offices, retail, restaurants and schools. Restaurants are typically booked between lunch and dinner service.",
+    q: "Can you schedule work so our business is not disrupted?",
+    a: "We work Monday to Friday, 8 a.m. to 5 p.m., and plan the visit around your day within those hours. Work is sequenced door by door so the building stays usable, noisy or disruptive steps are booked for your quietest period, and restaurants are typically booked before lunch service or between lunch and dinner.",
   },
   {
     category: "Pricing & Scheduling",
@@ -61,7 +61,7 @@ export const faqs: Faq[] = [
   {
     category: "Pricing & Scheduling",
     q: "Do you offer service agreements?",
-    a: "We do. Service agreements cover scheduled maintenance, priority emergency response and ongoing credential administration for access control clients. They suit portfolios and facilities where door hardware is a recurring line item rather than an occasional surprise.",
+    a: "We do. Service agreements cover scheduled maintenance and ongoing credential administration for access control clients. They suit portfolios and facilities where door hardware is a recurring line item rather than an occasional surprise.",
   },
 
   // Keys & Key Control
@@ -117,7 +117,7 @@ export const faqs: Faq[] = [
   {
     category: "Safes",
     q: "Can you open a safe without destroying it?",
-    a: "Almost always. We manipulate or scope safes open wherever possible, and when drilling is required it is at a designed repair point which we plug afterwards before replacing the lock. The overwhelming majority of safes we open return to full service the same day.",
+    a: "Almost always. We manipulate or scope safes open wherever possible, and when drilling is required it is at a designed repair point which we plug afterwards before replacing the lock. The overwhelming majority of safes we open return to full service on the same visit.",
   },
   {
     category: "Safes",
@@ -127,7 +127,7 @@ export const faqs: Faq[] = [
   {
     category: "Safes",
     q: "Do you move safes?",
-    a: "Yes — within a building or across the province, with the correct equipment and floor protection. We also anchor safes on installation, which is the step that stops a safe from simply being carried out during a break-in.",
+    a: "Yes — within a building or between sites in Winnipeg and the surrounding communities, with the correct equipment and floor protection. We also anchor safes on installation, which is the step that stops a safe from simply being carried out during a break-in.",
   },
 
   // Credentials & Coverage
@@ -144,11 +144,11 @@ export const faqs: Faq[] = [
   {
     category: "Credentials & Coverage",
     q: "How far do you travel?",
-    a: "We serve all of Manitoba. Winnipeg and the capital region receive 24/7 emergency response; regional centres such as Brandon, Steinbach, Portage la Prairie, Selkirk, Winkler, Dauphin and Thompson are served on scheduled service days, with emergency attendance by arrangement.",
+    a: "We serve Winnipeg and the surrounding communities, including the capital region, Selkirk, Steinbach and Portage la Prairie. We are a mobile service, so our technicians come to you. Visits outside the city are booked ahead, Monday to Friday.",
   },
   {
     category: "Credentials & Coverage",
-    q: "Do you work on residential locks?",
-    a: "Our focus is commercial, and that is where our technicians, stock and scheduling are concentrated. We do serve multifamily residential buildings — apartments and condominiums — through property managers and building owners.",
+    q: "Do you work on homes and vehicles as well as businesses?",
+    a: "Yes. We serve commercial, residential and automotive customers. That covers businesses and institutions, houses, apartments and condominiums, and locks and keys for vehicles. Tell us what you need when you call and we will confirm what is involved before booking.",
   },
 ];

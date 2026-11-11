@@ -7,9 +7,9 @@ import { JsonLd, pageMeta } from "@/lib/seo";
 import { breadcrumbSchema } from "@/components/Breadcrumbs";
 
 export const metadata = pageMeta({
-  title: "Service Areas | Commercial Locksmith Winnipeg & Manitoba",
+  title: "Service Areas | Mobile Locksmith Winnipeg & Area",
   description:
-    "Manitoba Lock & Safe serves every Winnipeg neighbourhood and communities across Manitoba — Brandon, Steinbach, Portage la Prairie, Selkirk, Winkler, Dauphin, Thompson and the capital region.",
+    "Manitoba Lock & Safe is a mobile locksmith serving every Winnipeg neighbourhood and surrounding communities, including the capital region, Selkirk, Steinbach and Portage la Prairie.",
   path: "/service-areas",
 });
 
@@ -21,10 +21,10 @@ export default function ServiceAreasPage() {
       <JsonLd data={breadcrumbSchema(crumbs)} />
       <PageHero
         eyebrow="Service areas"
-        title="Winnipeg in about 30 minutes. Manitoba on schedule."
-        blurb="Round-the-clock emergency response across Winnipeg and the capital region, with planned service days covering the rest of the province."
+        title="Winnipeg and the communities around it"
+        blurb="We are a mobile locksmith, so our service area is wherever the vans go: every Winnipeg neighbourhood and the surrounding communities, Monday to Friday."
         crumbs={crumbs}
-        badges={["24/7 Winnipeg dispatch", "Province-wide coverage", "Regional service days"]}
+        badges={["Mobile service", "Every Winnipeg neighbourhood", "Surrounding communities"]}
       />
       <TrustBar />
 
@@ -43,9 +43,9 @@ export default function ServiceAreasPage() {
 
       <Section tone="light">
         <SectionHeading
-          eyebrow="Across Manitoba"
-          title="Regional coverage, province-wide"
-          blurb="Regional work is scheduled as planned service days so you get a full technician visit rather than a rushed hour. Batching jobs keeps costs down — tell us everything you need before we come out."
+          eyebrow="Outside the city"
+          title="Surrounding communities"
+          blurb="Work outside the city is booked ahead. Tell us everything you need before we come out and we can usually handle it in one visit."
         />
         <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {manitobaLocations.map((l) => (
@@ -56,7 +56,7 @@ export default function ServiceAreasPage() {
 
       <CtaBand
         title="Not sure if we cover your location?"
-        blurb="We serve all of Manitoba. Call and we will tell you honestly what response time to expect at your address."
+        blurb="Not sure if we come out your way? Call and we will tell you straight."
       />
     </>
   );
@@ -83,7 +83,7 @@ function AreaCard({
       </p>
       <p className="mt-4 flex items-center gap-2 text-xs font-semibold text-navy-800">
         <Icon name="clock" className="h-4 w-4 text-blue-600" />
-        {location.responseTime}
+        Mobile service · Mon–Fri
       </p>
     </Link>
   );

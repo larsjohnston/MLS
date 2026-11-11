@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { caseStudies } from "@/data/case-studies";
+import { site } from "@/data/site";
 import { PageHero } from "@/components/PageHero";
 import { Icon } from "@/components/Icon";
 import { CtaBand, Section, SectionHeading, TrustBar } from "@/components/Ui";
@@ -24,7 +25,7 @@ export default function CaseStudiesPage() {
         title="Work at the scale Manitoba's largest facilities require"
         blurb="Airports, convention centres, national restaurant groups and commercial real estate portfolios. Different buildings, same standard."
         crumbs={crumbs}
-        badges={["Since 2012", "Commercial specialists", "All of Manitoba"]}
+        badges={[`Since ${site.founded}`, "Mobile service", "Winnipeg & area"]}
       />
       <TrustBar />
 

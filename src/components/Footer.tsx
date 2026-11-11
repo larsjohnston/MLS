@@ -19,9 +19,9 @@ export function Footer() {
           <div>
             <Logo dark />
             <p className="mt-4 text-sm leading-relaxed">
-              Commercial locksmith services across Winnipeg and all of Manitoba
-              since {site.founded}. Licensed, bonded and insured, with 24/7
-              emergency dispatch.
+              Mobile locksmith service for businesses, homes and vehicles in
+              Winnipeg and surrounding communities since {site.founded}.
+              Licensed, bonded and insured.
             </p>
             <div className="mt-5 space-y-2.5 text-sm">
               <a href={site.phone.href} className="flex items-center gap-2.5 font-semibold text-white hover:text-blue-100">
@@ -55,9 +55,7 @@ export function Footer() {
               <p className="flex items-start gap-2.5">
                 <Icon name="clock" className="mt-0.5 h-4 w-4 shrink-0 text-red-500" />
                 <span>
-                  Office: {site.hours.office}
-                  <br />
-                  Emergency: {site.hours.emergency}
+                  {site.hours.office}
                 </span>
               </p>
             </div>

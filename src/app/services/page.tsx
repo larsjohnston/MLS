@@ -14,9 +14,9 @@ import { JsonLd, pageMeta } from "@/lib/seo";
 import { breadcrumbSchema } from "@/components/Breadcrumbs";
 
 export const metadata = pageMeta({
-  title: "Commercial Locksmith Services Winnipeg | All Services",
+  title: "Locksmith Services Winnipeg | All Services",
   description:
-    "The full range of commercial locksmith services in Winnipeg and Manitoba — emergency lockouts, rekeying, master key systems, access control, high-security locks, safes, exit hardware and door repair.",
+    "Locksmith services in Winnipeg and surrounding communities — locks and keys, rekeying, master key systems, access control, automatic doors, door repair, safes, plus residential and automotive service.",
   path: "/services",
 });
 
@@ -27,12 +27,12 @@ export default function ServicesPage() {
     <>
       <JsonLd data={breadcrumbSchema(crumbs)} />
       <PageHero
-        eyebrow="Commercial services"
-        title="Commercial locksmith services in Winnipeg and across Manitoba"
-        blurb="Eleven service lines, one standard. Every job is scoped honestly, priced before it starts and documented when it finishes."
+        eyebrow="Our services"
+        title="Locksmith services in Winnipeg and surrounding communities"
+        blurb="Business, home and auto — one standard. Every job is scoped honestly, priced before it starts and documented when it finishes."
         crumbs={crumbs}
         badges={[
-          "24/7 emergency response",
+          "Mobile service",
           "Grade 1 commercial hardware",
           "Licensed, bonded & insured",
         ]}

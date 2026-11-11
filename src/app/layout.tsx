@@ -25,16 +25,16 @@ const barlow = Barlow_Condensed({
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: `Commercial Locksmith Winnipeg | ${site.name}`,
+    default: `Locksmith Winnipeg | ${site.name}`,
     template: `%s | ${site.name}`,
   },
   description:
-    "Commercial locksmith in Winnipeg serving all of Manitoba. 24/7 emergency lockouts, master key systems, access control, high-security locks, safes and door hardware. Licensed, bonded and insured since 2012.",
+    "Mobile locksmith serving Winnipeg and surrounding communities since 1984. Locks and keys, rekeying, master key systems, access control, door repair, automatic doors and safes for businesses, homes and vehicles.",
   applicationName: site.name,
   keywords: [
     "commercial locksmith Winnipeg",
     "locksmith Winnipeg",
-    "24 hour locksmith Winnipeg",
+    "mobile locksmith Winnipeg",
     "master key systems Winnipeg",
     "access control Winnipeg",
     "commercial rekeying Winnipeg",

@@ -73,15 +73,15 @@ export default async function ServicePage({
       />
 
       <PageHero
-        eyebrow={service.emergency ? "24/7 emergency service" : "Commercial service"}
+        eyebrow="Mobile locksmith service"
         title={service.heroHeading}
         blurb={service.heroSub}
         crumbs={crumbs}
         emergency={service.emergency}
         badges={[
-          "Winnipeg & all of Manitoba",
+          "Winnipeg & surrounding area",
           "Licensed, bonded & insured",
-          service.emergency ? "Answered 24/7" : "Quoted before we start",
+          "Quoted before we start",
         ]}
       />
       <TrustBar />
@@ -232,7 +232,7 @@ export default async function ServicePage({
 
       <CtaBand
         title={`Need ${service.shortName.toLowerCase()} in Winnipeg?`}
-        blurb="Call for immediate dispatch, or send us the details and we will quote it in writing."
+        blurb="Call us Monday to Friday, 8 to 5, or send us the details and we will quote it in writing."
       />
     </>
   );

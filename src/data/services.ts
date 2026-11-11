@@ -19,27 +19,27 @@ export type Service = {
 
 export const services: Service[] = [
   {
-    slug: "emergency-commercial-lockout-winnipeg",
-    name: "Emergency Commercial Lockout Service",
-    shortName: "Emergency Lockout",
-    icon: "siren",
-    emergency: true,
+    slug: "commercial-lockout-service-winnipeg",
+    name: "Commercial Lockout Service",
+    shortName: "Lockout Service",
+    icon: "truck",
+    emergency: false,
     summary:
-      "24/7 emergency lockout response for Winnipeg businesses. Non-destructive entry first, on-site repair second, so you are trading again the same visit.",
-    metaTitle: "Emergency Commercial Lockout Winnipeg | 24/7 Locksmith",
+      "Lockout service for Winnipeg businesses, Monday to Friday. Non-destructive entry first, on-site repair second, so the door works properly when we leave.",
+    metaTitle: "Commercial Lockout Service Winnipeg | Manitoba Lock & Safe",
     metaDescription:
-      "Locked out of your business in Winnipeg? Manitoba Lock & Safe runs 24/7 emergency commercial lockout service with fast response, non-destructive entry and on-the-spot repairs. Call now.",
-    heroHeading: "Locked out of your business? We are already rolling.",
+      "Locked out of your business in Winnipeg? Manitoba Lock & Safe provides mobile commercial lockout service Monday to Friday, 8 a.m. to 5 p.m., with non-destructive entry and on-the-spot repairs.",
+    heroHeading: "Locked out of your business? We come to you.",
     heroSub:
-      "24/7 emergency commercial lockout response across Winnipeg and Manitoba — non-destructive entry, licensed technicians, one visit.",
+      "Mobile commercial lockout service across Winnipeg and surrounding communities, Monday to Friday, 8 a.m. to 5 p.m. — non-destructive entry, licensed technicians, one visit.",
     intro: [
-      "A locked commercial door is not an inconvenience, it is lost revenue. Staff standing in the parking lot, deliveries turned away, a shift that cannot start. Manitoba Lock & Safe answers emergency lockout calls around the clock, and our dispatchers are locksmiths themselves — you describe the door, they know the hardware before the truck leaves.",
-      "We are non-destructive first on every call. Picking, bypassing and decoding come before drilling, because the cheapest lockout is the one that ends with your existing hardware intact. When a cylinder genuinely cannot be saved, our trucks carry commercial-grade replacements in stock, so the repair happens on the same visit instead of after a week of waiting on parts.",
+      "A locked commercial door is not an inconvenience, it is lost revenue. Staff standing in the parking lot, deliveries turned away, a shift that cannot start. Call Manitoba Lock & Safe during business hours and you speak to people who know commercial hardware — you describe the door, and the technician arrives knowing what to expect.",
+      "We are non-destructive first on every call. Picking, bypassing and decoding come before drilling, because the cheapest lockout is the one that ends with your existing hardware intact. When a cylinder genuinely cannot be saved, our service vehicles carry commercial-grade replacements, so the repair can usually happen on the same visit instead of after a wait for parts.",
     ],
     offerings: [
       {
-        title: "After-hours and weekend response",
-        body: "Nights, weekends, statutory holidays and −40 °C January mornings. Emergency dispatch never goes to voicemail.",
+        title: "Mobile service at your door",
+        body: "We are a mobile company. A technician comes to your building with the tools and stock on the vehicle — there is nothing to bring in.",
       },
       {
         title: "Non-destructive entry",
@@ -54,8 +54,8 @@ export const services: Service[] = [
         body: "Dead card readers, failed maglocks, drained battery packs and controllers locked in a fault state — restored or safely bypassed.",
       },
       {
-        title: "Break-in and vandalism board-up",
-        body: "Damaged hardware secured immediately after a forced entry, with permanent repair scheduled before your insurer's deadline.",
+        title: "Break-in and vandalism repair",
+        body: "Damaged hardware secured after a forced entry, with any permanent repair that needs parts scheduled as a follow-up visit.",
       },
       {
         title: "Safe lockouts",
@@ -72,8 +72,8 @@ export const services: Service[] = [
     ],
     process: [
       {
-        step: "You call, a locksmith answers",
-        body: "We take the address, the door type and the hardware on it, and give you a realistic arrival window — not a vague 'sometime today'.",
+        step: "You call during business hours",
+        body: "We take the address, the door type and the hardware on it, and tell you honestly when a technician can be there.",
       },
       {
         step: "We verify authority",
@@ -85,7 +85,7 @@ export const services: Service[] = [
       },
       {
         step: "Repair or replace on the spot",
-        body: "If the hardware failed, we fix or swap it during the same visit from stock carried on the truck.",
+        body: "If the hardware failed, we fix or swap it during the same visit wherever the part is on the vehicle.",
       },
       {
         step: "You get a written invoice",
@@ -94,8 +94,8 @@ export const services: Service[] = [
     ],
     faqs: [
       {
-        q: "How fast can you get to my business in Winnipeg?",
-        a: "Most Winnipeg calls are reached within about 30 minutes. Perimeter communities such as Headingley, East and West St. Paul and Oak Bluff typically run 45 to 60 minutes, and we quote a realistic window for regional Manitoba calls before we dispatch.",
+        q: "When are you available for lockouts?",
+        a: "Monday to Friday, 8 a.m. to 5 p.m. We serve Winnipeg and surrounding communities such as Headingley, East and West St. Paul and Oak Bluff. When you call, we tell you when a technician can reach you before you commit to anything.",
       },
       {
         q: "Will you have to drill my lock?",
@@ -106,8 +106,8 @@ export const services: Service[] = [
         a: "Photo ID plus something tying you to the premises — a lease, a business licence, a utility bill, a corporate ID badge or a signed property-management work order. Our licence requires it and we do not skip it.",
       },
       {
-        q: "Do you charge extra at night?",
-        a: "After-hours calls carry an emergency rate, and we tell you what it is on the phone before we dispatch. You will not be surprised by the invoice.",
+        q: "Will I know the price before you start?",
+        a: "Yes. We explain the charges on the phone before a technician is sent, and you approve the work before it begins. You will not be surprised by the invoice.",
       },
     ],
     related: [
@@ -126,10 +126,10 @@ export const services: Service[] = [
       "Supply, installation and repair of commercial-grade locking hardware — specified to the traffic your doors actually see, not to a big-box price point.",
     metaTitle: "Commercial Lock Installation & Repair Winnipeg | Manitoba Lock & Safe",
     metaDescription:
-      "Commercial lock installation and repair in Winnipeg and across Manitoba. Grade 1 hardware, mortise and cylindrical locksets, exit devices and closers, installed by licensed locksmiths.",
+      "Commercial lock installation and repair in Winnipeg and surrounding communities. Grade 1 hardware, mortise and cylindrical locksets, exit devices and closers, installed by licensed locksmiths.",
     heroHeading: "Commercial hardware, specified and installed properly.",
     heroSub:
-      "Grade 1 and Grade 2 locksets supplied, installed and repaired across Winnipeg and Manitoba by licensed commercial locksmiths.",
+      "Grade 1 and Grade 2 locksets supplied, installed and repaired across Winnipeg and surrounding communities by licensed commercial locksmiths.",
     intro: [
       "The single most common reason a commercial door fails is that residential-grade hardware was installed on a door that opens four hundred times a day. Manitoba Lock & Safe specifies to ANSI/BHMA grade, and we install what the opening actually requires — a Grade 1 mortise lockset on a busy public entrance, a Grade 2 cylindrical on a low-traffic interior office, and the correct function for the room behind the door.",
       "We install new hardware, retrofit old openings and repair what can still be saved. In a Manitoba winter, most 'broken locks' are not broken locks at all — they are doors that have shifted on their hinges, latches misaligned with strikes, or closers running the wrong seasonal valve setting. We diagnose the opening as a system, so the fix lasts past the next freeze-thaw cycle.",
@@ -220,10 +220,10 @@ export const services: Service[] = [
       "Fast, documented rekeying for staff turnover, tenant changes and lost keys — keeping your existing hardware and changing only what the key does.",
     metaTitle: "Commercial Rekeying Winnipeg | Business Lock Rekey Service",
     metaDescription:
-      "Commercial rekeying in Winnipeg and across Manitoba. Rekey after staff turnover, tenant changes or lost keys — keep your hardware, change your keys, get full documentation.",
+      "Commercial rekeying in Winnipeg and surrounding communities. Rekey after staff turnover, tenant changes or lost keys — keep your hardware, change your keys, get full documentation.",
     heroHeading: "Someone has a key you cannot account for. Fix that today.",
     heroSub:
-      "Commercial rekeying across Winnipeg and Manitoba — same-day service, existing hardware retained, every change documented.",
+      "Commercial rekeying across Winnipeg and surrounding communities — existing hardware retained, every change documented.",
     intro: [
       "Rekeying changes what a key opens without changing the lock on the door. The cylinder is re-pinned to a new combination, old keys stop working, and your existing hardware — often expensive Grade 1 hardware — stays exactly where it is. For most Winnipeg businesses it costs a fraction of replacement and takes a fraction of the time.",
       "The trigger is almost always the same: a manager left, a tenant moved out, a keyring went missing, or the building changed hands and nobody can say how many keys are in circulation. We rekey on site, cut and stamp new keys, and hand back a written key schedule showing exactly who holds what — so the next time this happens, you are answering from records instead of guessing.",
@@ -231,7 +231,7 @@ export const services: Service[] = [
     offerings: [
       {
         title: "Staff turnover rekeys",
-        body: "Rapid turnaround when a keyholder leaves, so an unreturned key stops being a liability the same day.",
+        body: "Rekeying when a keyholder leaves, so an unreturned key stops being a liability.",
       },
       {
         title: "Tenant turnover",
@@ -287,7 +287,7 @@ export const services: Service[] = [
       },
       {
         q: "How quickly can you rekey our building?",
-        a: "Small businesses are usually finished in a single visit, often same-day. Larger portfolios are scoped first and then scheduled — typically overnight or on a weekend so trading hours are not disrupted.",
+        a: "Small businesses are usually finished in a single visit, depending on the number of doors. Larger portfolios are scoped first and then scheduled in stages during our Monday-to-Friday hours, planned with you to keep disruption to tenants and staff low.",
       },
       {
         q: "Can we keep one key for every door?",
@@ -314,7 +314,7 @@ export const services: Service[] = [
       "Designed, documented master key systems that give every person exactly the access they need and nothing more — built to expand as your building does.",
     metaTitle: "Master Key Systems Winnipeg | Commercial Locksmith Design & Install",
     metaDescription:
-      "Master key system design and installation in Winnipeg and Manitoba. Grand master, master and sub-master hierarchies, fully documented, expandable and under proper key control.",
+      "Master key system design and installation in Winnipeg and surrounding communities. Grand master, master and sub-master hierarchies, fully documented, expandable and under proper key control.",
     heroHeading: "One key for you. The right key for everyone else.",
     heroSub:
       "Master key systems designed, installed and documented for Winnipeg buildings — from a six-door office to a multi-building campus.",
@@ -412,7 +412,7 @@ export const services: Service[] = [
       "Fobs, cards, keypads and mobile credentials installed and serviced — with audit trails, instant revocation and schedules that lock and unlock your building for you.",
     metaTitle: "Access Control Systems Winnipeg | Fobs, Card Readers & Keypads",
     metaDescription:
-      "Commercial access control in Winnipeg and Manitoba. Key fob and card reader systems, keypads, mobile credentials, audit trails and instant credential revocation. Installed and serviced.",
+      "Commercial access control in Winnipeg and surrounding communities. Key fob and card reader systems, keypads, mobile credentials, audit trails and instant credential revocation. Installed and serviced.",
     heroHeading: "Stop replacing keys. Start revoking credentials.",
     heroSub:
       "Access control systems designed, installed and maintained for Winnipeg businesses — fobs, cards, keypads and mobile credentials.",
@@ -514,10 +514,10 @@ export const services: Service[] = [
       "Code-compliant exit hardware supplied, installed and repaired — so your egress doors pass inspection and open when it matters most.",
     metaTitle: "Panic Bars & Exit Devices Winnipeg | Door Closer Repair",
     metaDescription:
-      "Panic bar, exit device and door closer installation and repair in Winnipeg and Manitoba. Code-compliant egress hardware, delayed egress, fire-rated devices and closer adjustment.",
+      "Panic bar, exit device and door closer installation and repair in Winnipeg and surrounding communities. Code-compliant egress hardware, delayed egress, fire-rated devices and closer adjustment.",
     heroHeading: "Egress hardware that passes inspection and works under pressure.",
     heroSub:
-      "Panic bars, exit devices, delayed egress and door closers installed, repaired and adjusted across Winnipeg and Manitoba.",
+      "Panic bars, exit devices, delayed egress and door closers installed, repaired and adjusted across Winnipeg and surrounding communities.",
     intro: [
       "Exit hardware is the one part of your building that has to work perfectly on the worst day you ever have. Manitoba's building and fire codes are specific about it: an egress door must open with a single motion, without a key, without special knowledge, and in the direction of travel. When an inspector writes up a deficiency, it is usually exit hardware.",
       "We install, repair and adjust the full range of exit devices — rim, mortise, surface vertical rod, concealed vertical rod, fire-rated and delayed egress — plus the closers that control them. We also fix the improvised violations we find constantly on Winnipeg service calls: chained exit doors, thumbturn deadbolts added above panic bars, and closers cranked down so hard nobody can get through.",
@@ -615,7 +615,7 @@ export const services: Service[] = [
       "High-security locks and restricted keyways in Winnipeg. Medeco, Mul-T-Lock and ASSA Abloy patented cylinders with pick resistance, drill resistance and enforceable key control.",
     heroHeading: "Keys that cannot be copied at a hardware store.",
     heroSub:
-      "Patented high-security cylinders and restricted keyways installed across Winnipeg and Manitoba, with documented key control.",
+      "Patented high-security cylinders and restricted keyways installed across Winnipeg and surrounding communities, with documented key control.",
     intro: [
       "Standard commercial cylinders share two weaknesses: they can be picked by anyone with practice, and their keys can be copied anywhere for a few dollars. High-security cylinders fix both. Hardened inserts and anti-drill pins resist forced attack, sidebars and rotating elements resist picking and bumping, and the key blank itself is protected by an active patent.",
       "That patent is the part most Winnipeg businesses underestimate. A restricted keyway means the blank is not sold on the open market — a copy can only be cut by an authorised dealer, against a signature from a name on your authorisation list. It converts key control from a hopeful stamp on a key into something legally and practically enforceable, which is exactly what auditors, insurers and tenants want to see.",
@@ -706,10 +706,10 @@ export const services: Service[] = [
       "Commercial safes supplied, installed, serviced, moved and opened — including safes with lost combinations, failed locks or drained electronics.",
     metaTitle: "Safe Opening & Safe Sales Winnipeg | Commercial Safe Technician",
     metaDescription:
-      "Commercial safe sales, service and opening in Winnipeg and Manitoba. Lost combinations, failed safe locks, safe moving and installation, deposit and fire safes, by certified safe technicians.",
+      "Commercial safe sales, service and opening in Winnipeg and surrounding communities. Lost combinations, failed safe locks, safe moving and installation, deposit and fire safes, by certified safe technicians.",
     heroHeading: "Your safe is closed and you need what is inside.",
     heroSub:
-      "Commercial safe opening, service, sales and installation across Winnipeg and Manitoba by certified safe technicians.",
+      "Commercial safe opening, service, sales and installation across Winnipeg and surrounding communities by certified safe technicians.",
     intro: [
       "A safe that will not open stops a business cold — the float is inside, the day's deposit is inside, the controlled substances or the payroll records are inside. We open commercial safes when the combination is lost, the electronic lock has failed, the boltwork has jammed, or the only person who knew the code no longer works for you.",
       "Manipulation and scoping come before drilling, and where drilling is unavoidable we drill to a known repair point and restore the safe to full working order afterwards — most safes are back in service the same day rather than scrapped. We also sell, deliver, install, service and relocate commercial safes, including deposit safes, fire-rated safes, pharmacy safes, gun safes and TL-rated units.",
@@ -737,7 +737,7 @@ export const services: Service[] = [
       },
       {
         title: "Safe moving",
-        body: "Relocation within a building or across the province, handled with proper equipment and floor protection.",
+        body: "Relocation within a building or across the Winnipeg area, handled with proper equipment and floor protection.",
       },
       {
         title: "Vault and depository service",
@@ -785,7 +785,7 @@ export const services: Service[] = [
       },
       {
         q: "Can you open a safe on site or does it need to come in?",
-        a: "The large majority are opened on site. Only unusual cases — a badly damaged unit or one needing extensive rebuild — come back to the shop.",
+        a: "The large majority are opened on site. We are a mobile company, so the work happens where the safe sits. In unusual cases — a badly damaged unit or one needing extensive rebuild — we will explain the options before going further.",
       },
       {
         q: "What safe should a restaurant or retail store buy?",
@@ -793,7 +793,7 @@ export const services: Service[] = [
       },
     ],
     related: [
-      "emergency-commercial-lockout-winnipeg",
+      "commercial-lockout-service-winnipeg",
       "high-security-locks-winnipeg",
       "commercial-lock-repair-installation-winnipeg",
     ],
@@ -811,7 +811,7 @@ export const services: Service[] = [
       "Commercial door and frame repair in Winnipeg. Aluminium storefront doors, Adams Rite hardware, pivots, closers, break-in damage repair and frame straightening by licensed locksmiths.",
     heroHeading: "The lock is fine. The door is the problem.",
     heroSub:
-      "Commercial door, frame and aluminium storefront repair across Winnipeg and Manitoba — including emergency break-in damage.",
+      "Commercial door, frame and aluminium storefront repair across Winnipeg and surrounding communities — including break-in damage.",
     intro: [
       "A large share of the 'broken lock' calls we take in Winnipeg turn out to be doors, not locks. Doors sag on worn hinges, aluminium storefront leaves rack out of square, frames spread after a forced entry, and thresholds heave through the freeze-thaw cycle until the latch no longer meets the strike. Swapping the lockset on any of that changes nothing.",
       "We repair the opening as a whole. Hinges and pivots replaced, frames straightened and reinforced, strikes relocated, sweeps and weatherstripping renewed, closers reset. It is a speciality that matters more here than in most of the country — 35 °C to −35 °C in a single year moves steel and aluminium, and hardware that was perfect in September is fighting the frame by January.",
@@ -827,7 +827,7 @@ export const services: Service[] = [
       },
       {
         title: "Break-in damage repair",
-        body: "Emergency securing after a forced entry, then permanent repair of the frame, door edge and hardware.",
+        body: "Securing the opening after a forced entry, then permanent repair of the frame, door edge and hardware.",
       },
       {
         title: "Frame straightening and reinforcement",
@@ -860,8 +860,8 @@ export const services: Service[] = [
         body: "We check plumb, square, hinge wear, frame condition and strike alignment before touching the hardware.",
       },
       {
-        step: "Emergency securing",
-        body: "After a break-in, the opening is made secure immediately, before the permanent repair is scheduled.",
+        step: "Secure the opening",
+        body: "After a break-in, the opening is made secure first, before the permanent repair is scheduled.",
       },
       {
         step: "Repair",
@@ -875,7 +875,7 @@ export const services: Service[] = [
     faqs: [
       {
         q: "Can you repair the door after a break-in, or do we need a new one?",
-        a: "Most commercial doors and frames are repairable, and repair is usually far cheaper and faster than replacement. We secure the opening immediately, then quote the permanent repair with the documentation your insurer will ask for.",
+        a: "Most commercial doors and frames are repairable, and repair is usually far cheaper and faster than replacement. We secure the opening first, then quote the permanent repair with the documentation your insurer will ask for.",
       },
       {
         q: "Why does our storefront door only stick in winter?",
@@ -887,11 +887,11 @@ export const services: Service[] = [
       },
       {
         q: "How fast can you secure a door after a break-in?",
-        a: "Break-in calls are treated as emergencies and dispatched immediately, day or night. Getting the opening secure comes first; the permanent repair is scheduled right behind it.",
+        a: "Call us during business hours, Monday to Friday, 8 a.m. to 5 p.m., and we will tell you when a technician can attend. Getting the opening secure comes first; the permanent repair is scheduled right behind it.",
       },
     ],
     related: [
-      "emergency-commercial-lockout-winnipeg",
+      "commercial-lockout-service-winnipeg",
       "commercial-lock-repair-installation-winnipeg",
       "panic-bars-exit-devices-winnipeg",
     ],
@@ -981,7 +981,7 @@ export const services: Service[] = [
       },
       {
         q: "Is this a service call or can we bring furniture to you?",
-        a: "Either. Most of this work happens on site during a single visit, but you are welcome to bring a drawer front or a removable lock to the shop if that is simpler.",
+        a: "We come to you. We are a mobile company, and most of this work is finished on site in a single visit.",
       },
     ],
     related: [
@@ -1005,7 +1005,7 @@ export const services: Service[] = [
     heroSub:
       "Commercial key cutting and duplication in Winnipeg — by code, in bulk, and on restricted keyways with proper authorisation.",
     intro: [
-      "A key cut from a worn copy inherits every error in that copy, and the third-generation duplicate is the one that sticks in the cylinder and eventually snaps. We cut commercial keys by code wherever the code is available, which produces a key to factory specification instead of a copy of a copy — and we cut on calibrated commercial machines rather than a self-serve kiosk.",
+      "A key cut from a worn copy inherits every error in that copy, and the third-generation duplicate is the one that sticks in the cylinder and eventually snaps. We cut commercial keys by code wherever the code is available, which produces a key to factory specification instead of a copy of a copy — and we cut on calibrated commercial machines carried on our service vehicles, at your building, rather than at a self-serve kiosk.",
       "We handle the volume work too: a property manager needing sixty suite keys before a turnover weekend, a facility adding staff, a contractor set that needs stamping and tracking. Restricted and high-security blanks are cut only against your written authorisation list, which is the entire point of having them.",
     ],
     offerings: [
@@ -1075,13 +1075,384 @@ export const services: Service[] = [
       },
       {
         q: "How quickly can you turn around a bulk order?",
-        a: "Standard commercial blanks are usually same or next day, even in volume. Restricted blanks depend on stock, and we will tell you the real lead time when you order.",
+        a: "It depends on the blank and the quantity. Standard commercial blanks are usually straightforward; restricted blanks depend on stock. We will tell you the real lead time when you order, and we deliver the keys to you.",
       },
     ],
     related: [
       "commercial-rekeying-winnipeg",
       "high-security-locks-winnipeg",
       "master-key-systems-winnipeg",
+    ],
+  },
+
+  {
+    slug: "automatic-door-operators-winnipeg",
+    name: "Automatic & Accessible Door Operators",
+    shortName: "Automatic Doors",
+    icon: "door",
+    emergency: false,
+    summary:
+      "Automatic doors and push-button accessible operators installed, serviced and repaired, so every visitor can get through your entrance.",
+    metaTitle: "Automatic Door Installation & Repair Winnipeg | Accessible Operators",
+    metaDescription:
+      "Automatic door installation, service and repair in Winnipeg and surrounding communities. Push-button accessible door operators, low-touch hardware and repairs to existing automatic doors.",
+    heroHeading: "A door that opens for everyone.",
+    heroSub:
+      "Automatic doors and push-button accessible operators installed, serviced and repaired across Winnipeg and surrounding communities.",
+    intro: [
+      "An automatic door is the simplest way to welcome every visitor — people using wheelchairs and walkers, parents with strollers, staff carrying stock, customers pushing carts. Manitoba Lock & Safe installs new automatic operators, adds push-button operators to existing swing doors, and repairs the ones that have stopped behaving.",
+      "An operator is only as good as the door it is moving. Before we recommend anything we look at the whole opening: the door's weight and swing, the hinges or pivots, the closer, the latching hardware and how the lock releases when the button is pressed. Most operator complaints trace back to one of those, and fixing the opening is what makes the operator last.",
+      "Not sure where to start? Tell us about the entrance and who uses it, and we will walk you through the options in plain language before quoting.",
+    ],
+    offerings: [
+      {
+        title: "New automatic door operators",
+        body: "Operators supplied and installed on new or existing swing doors, matched to the door's weight, traffic and exposure to weather.",
+      },
+      {
+        title: "Push-button accessible operators",
+        body: "Push-plate and wave-to-open accessible entrances for main doors, vestibules and washrooms.",
+      },
+      {
+        title: "Service and repair",
+        body: "Doors that open slowly, slam, stop part-way, fail to latch or ignore the button — diagnosed and repaired on site.",
+      },
+      {
+        title: "Low-touch door hardware",
+        body: "Touchless switches, foot and arm pulls and automatically closing doors for clinics, schools, food service and other shared spaces.",
+      },
+      {
+        title: "Lock and access control integration",
+        body: "Operators tied into electric strikes, card readers and keypads so the door unlocks and opens in the right order.",
+      },
+      {
+        title: "Adjustment and maintenance",
+        body: "Speed, force and hold-open settings checked and adjusted, including the seasonal changes a Manitoba winter demands.",
+      },
+    ],
+    signs: [
+      "The push button works some days and not others",
+      "The door opens too slowly, too fast or only part of the way",
+      "The door no longer latches or locks after it closes",
+      "Wind catches the door and the operator fights it",
+      "Visitors with mobility aids are struggling with your entrance",
+      "You are renovating and need an accessible entrance",
+    ],
+    process: [
+      {
+        step: "Look at the entrance",
+        body: "We assess the door, frame, hardware, power and how people actually use the opening.",
+      },
+      {
+        step: "Recommend and quote",
+        body: "You get a written quote for the repair or the new operator, with the options explained.",
+      },
+      {
+        step: "Install or repair",
+        body: "The work is done on site, with the locking hardware and any access control connected and tested.",
+      },
+      {
+        step: "Adjust and show you",
+        body: "Opening speed, force and hold-open time are set, and your staff are shown how the door works and what to watch for.",
+      },
+    ],
+    faqs: [
+      {
+        q: "Can an operator be added to my existing door?",
+        a: "Often, yes. Many swing doors can take an operator without being replaced, provided the door, frame and hinges are in good condition. We check the opening first and tell you honestly if the door needs work before an operator will be reliable.",
+      },
+      {
+        q: "My automatic door has stopped working. Can you repair it?",
+        a: "Usually. Many faults turn out to be a switch, a sensor, an adjustment or worn door hardware rather than the operator itself. We diagnose the cause on site and quote the repair before proceeding.",
+      },
+      {
+        q: "Will the door still lock?",
+        a: "Yes. The operator is set up to work with your locking hardware, so the door releases when it should open and secures when it closes. If you have access control, we connect the two.",
+      },
+      {
+        q: "How much does an automatic door cost?",
+        a: "It depends on the door, the type of operator, the power available and what the locking hardware needs. We look at the opening and give you a written quote rather than a guess over the phone.",
+      },
+    ],
+    related: [
+      "door-frame-storefront-repair-winnipeg",
+      "panic-bars-exit-devices-winnipeg",
+      "access-control-systems-winnipeg",
+    ],
+  },
+
+  {
+    slug: "smart-locks-keyless-entry-winnipeg",
+    name: "Smart Locks & Keyless Entry",
+    shortName: "Smart Locks",
+    icon: "card",
+    emergency: false,
+    summary:
+      "Keypad, phone and fob-controlled locks for homes and businesses — chosen to suit the door and installed properly.",
+    metaTitle: "Smart Lock Installation Winnipeg | Keyless Entry for Home & Business",
+    metaDescription:
+      "Smart lock and keyless entry installation in Winnipeg and surrounding communities. Keypad, phone and fob-controlled locks for homes and businesses, supplied, installed and set up by a locksmith.",
+    heroHeading: "Keyless entry, installed by a locksmith.",
+    heroSub:
+      "Keypad, phone and fob-controlled locks for homes and businesses across Winnipeg and surrounding communities.",
+    intro: [
+      "A smart lock lets you open the door with a code, a phone or a fob instead of a key — and lets you give someone access, or take it away, without cutting or collecting anything. For a home that means no more hidden spare key. For a business it means a code for the cleaner that can be changed when the contract ends.",
+      "The lock still has to suit the door. A keypad that struggles in the cold, a deadbolt that binds because the door has shifted, or a lock that does not suit the thickness of the door will be a nuisance however clever it is. We help you choose a lock that fits the door, the climate and the way you want to use it, then install it and set it up with you.",
+    ],
+    offerings: [
+      {
+        title: "Keypad locks",
+        body: "Push-button and touchscreen locks with individual codes you can add, change and delete yourself.",
+      },
+      {
+        title: "Phone-controlled locks",
+        body: "Locks you can operate and manage from an app, including giving a guest or tradesperson temporary access.",
+      },
+      {
+        title: "Fob and card locks",
+        body: "Standalone fob or card locks for offices, suites and shared entrances that do not need a full access control system.",
+      },
+      {
+        title: "Installation and door preparation",
+        body: "The door and frame are checked and adjusted so the bolt throws freely — the most common reason a smart lock drains batteries or jams.",
+      },
+      {
+        title: "Setup and handover",
+        body: "Codes, users and the app are set up with you on site, and you are shown how to manage them afterwards.",
+      },
+      {
+        title: "Lock you already bought",
+        body: "Have a smart lock still in the box? We can install it, and tell you first if it is not a good match for your door.",
+      },
+    ],
+    signs: [
+      "You are tired of hiding a spare key or lending keys out",
+      "Staff, cleaners or contractors need access you can switch off later",
+      "You run a rental or shared space with changing occupants",
+      "Family members keep getting locked out",
+      "Your current keypad lock jams, sticks or eats batteries",
+    ],
+    process: [
+      {
+        step: "Talk through how you use the door",
+        body: "Who needs access, how often it changes and whether you want a keypad, a phone, a fob or a mix.",
+      },
+      {
+        step: "Check the door",
+        body: "We look at the door, frame and existing lock so the recommendation actually fits.",
+      },
+      {
+        step: "Install",
+        body: "The lock is fitted and the door adjusted so it latches and locks smoothly.",
+      },
+      {
+        step: "Set up and hand over",
+        body: "Codes and users are programmed with you, and you are shown how to change them yourself.",
+      },
+    ],
+    faqs: [
+      {
+        q: "What happens if the batteries die?",
+        a: "Most smart locks warn you well before the batteries run out, and many keep a key cylinder or another backup way in. We go through the backup for your specific lock when we install it.",
+      },
+      {
+        q: "Do smart locks work in a Winnipeg winter?",
+        a: "Choosing a lock suited to an exterior door in a cold climate matters, and so does a door that closes and latches cleanly. Cold shortens battery life, so we talk through what to expect for the lock you choose.",
+      },
+      {
+        q: "Is a smart lock enough for my business?",
+        a: "For one or two doors and a handful of users, often yes. If you need many doors, schedules or a record of who came and went, an access control system is the better fit — we install both and will tell you which suits you.",
+      },
+      {
+        q: "Can you install a lock I bought myself?",
+        a: "Yes. We will check it against your door first and let you know if there is a problem before we start.",
+      },
+    ],
+    related: [
+      "access-control-systems-winnipeg",
+      "residential-locksmith-winnipeg",
+      "commercial-lock-repair-installation-winnipeg",
+    ],
+  },
+
+  {
+    slug: "residential-locksmith-winnipeg",
+    name: "Residential Locksmith Service",
+    shortName: "Residential",
+    icon: "key",
+    emergency: false,
+    summary:
+      "Home rekeying, deadbolts, lock repair and installation, home lockouts and home safes — a locksmith who comes to your door.",
+    metaTitle: "Residential Locksmith Winnipeg | Home Rekeying, Deadbolts & Lock Repair",
+    metaDescription:
+      "Residential locksmith in Winnipeg and surrounding communities. Home rekeying, deadbolt installation, lock repair, home lockouts and home safes. Mobile service, Monday to Friday, 8 a.m. to 5 p.m.",
+    heroHeading: "Feel secure at home.",
+    heroSub:
+      "Home rekeying, deadbolts, lock repair and lockouts across Winnipeg and surrounding communities — mobile service, Monday to Friday.",
+    intro: [
+      "Your home's locks protect the people and things that matter most to you, and most homeowners never think about them until something goes wrong: a move into a house with an unknown number of keys in circulation, a deadbolt that has become stiff, a lost key ring, a door that no longer closes properly.",
+      "Manitoba Lock & Safe is a mobile locksmith, so we come to you. A technician looks at the doors, explains what is worth doing and what is not, and gives you the price before any work begins. Our hours are Monday to Friday, 8 a.m. to 5 p.m.",
+    ],
+    offerings: [
+      {
+        title: "Home rekeying",
+        body: "Your existing locks changed to work with new keys, so old keys stop working. Ideal after a move, a lost key or a change of tenants — and several doors can be set to one key.",
+      },
+      {
+        title: "Deadbolts",
+        body: "Deadbolts supplied and installed in Grade 1, 2 and 3, in a range of finishes to suit your home, with the strike properly reinforced.",
+      },
+      {
+        title: "Lock repair and installation",
+        body: "Sticking, loose or worn locks repaired, and new locks fitted to entry doors, patio doors, garages and gates.",
+      },
+      {
+        title: "Home lockouts",
+        body: "Locked out during business hours? We open the door with non-destructive methods wherever possible. Proof that you live there is required.",
+      },
+      {
+        title: "Home safes",
+        body: "Help choosing a safe for documents, valuables or firearms, plus installation and service for safes you already own.",
+      },
+      {
+        title: "Smart and keypad locks",
+        body: "Keyless locks supplied and installed, or the one you already bought fitted properly.",
+      },
+    ],
+    signs: [
+      "You have just moved in and do not know who has keys",
+      "A key has been lost or not returned",
+      "The key sticks or the deadbolt is hard to turn",
+      "The door has to be pushed or lifted before it will lock",
+      "You have had a break-in or an attempted one",
+      "You carry a different key for every door",
+    ],
+    process: [
+      {
+        step: "Call or request a quote",
+        body: "Tell us what is happening and we will book a visit during our Monday-to-Friday hours.",
+      },
+      {
+        step: "We come to you",
+        body: "A technician checks the doors and locks and explains your options in plain language.",
+      },
+      {
+        step: "You approve the price",
+        body: "You know the cost before any work starts.",
+      },
+      {
+        step: "The work is done on site",
+        body: "Locks are rekeyed, repaired or replaced, tested with you, and your new keys handed over.",
+      },
+    ],
+    faqs: [
+      {
+        q: "Should I rekey or replace my locks?",
+        a: "If the locks are in good condition, rekeying is usually all you need — the old keys stop working and you keep the hardware. Replacement makes sense when a lock is worn, damaged, or you want better security or a different style.",
+      },
+      {
+        q: "What do deadbolt grades mean?",
+        a: "Grade 1 is the most durable, Grade 2 is a solid residential standard and Grade 3 is basic. We explain the difference for your door and let you choose.",
+      },
+      {
+        q: "Are you available at night or on weekends?",
+        a: "No. Our hours are Monday to Friday, 8 a.m. to 5 p.m.",
+      },
+      {
+        q: "Do I need to bring anything to you?",
+        a: "No. We are a mobile company and all the work is done at your home.",
+      },
+    ],
+    related: [
+      "smart-locks-keyless-entry-winnipeg",
+      "safe-opening-service-winnipeg",
+      "high-security-locks-winnipeg",
+    ],
+  },
+
+  {
+    slug: "automotive-locksmith-winnipeg",
+    name: "Automotive Locksmith Service",
+    shortName: "Automotive",
+    icon: "keys",
+    emergency: false,
+    summary:
+      "Vehicle lockouts and car key cutting and replacement during business hours. Call to confirm we can help with your vehicle.",
+    metaTitle: "Automotive Locksmith Winnipeg | Car Lockouts & Key Replacement",
+    metaDescription:
+      "Automotive locksmith service in Winnipeg and surrounding communities. Vehicle lockouts and car key cutting and replacement, Monday to Friday, 8 a.m. to 5 p.m. Call to confirm for your vehicle.",
+    heroHeading: "Locked out of your vehicle, or need a key?",
+    heroSub:
+      "Vehicle lockouts and car key cutting and replacement across Winnipeg and surrounding communities, Monday to Friday, 8 a.m. to 5 p.m.",
+    intro: [
+      "Keys locked in the car, a key that has snapped, or a single key with no spare — vehicle key problems tend to arrive at a bad moment. Manitoba Lock & Safe is a mobile locksmith, so a technician comes to the vehicle.",
+      "Vehicles vary a great deal by make, model and year, and so do their keys. The quickest way to find out whether we can help is to call with those details. We will tell you plainly whether it is something we can do, and what it involves, before anyone is sent out.",
+    ],
+    offerings: [
+      {
+        title: "Vehicle lockouts",
+        body: "Keys locked inside? We open the vehicle during business hours, taking care not to damage the door, the weather seals or the lock.",
+      },
+      {
+        title: "Car key cutting",
+        body: "Spare and replacement keys cut for your vehicle. Call with the make, model and year so we can confirm before we come.",
+      },
+      {
+        title: "Lost key replacement",
+        body: "No working key at all? Call us with the vehicle details and we will tell you whether we can help.",
+      },
+      {
+        title: "Broken key extraction",
+        body: "Snapped keys removed from the door lock or ignition.",
+      },
+      {
+        title: "Fleet and work vehicles",
+        body: "Spare keys and lock problems for company vehicles, arranged alongside the locksmith work at your building.",
+      },
+    ],
+    signs: [
+      "Your keys are locked inside the vehicle",
+      "You are down to one key and have no spare",
+      "The key is worn and has become hard to turn",
+      "A key has broken off in the lock or ignition",
+      "A company vehicle has gone out with no spare key on file",
+    ],
+    process: [
+      {
+        step: "Call with your vehicle details",
+        body: "Make, model and year, where the vehicle is and what has happened.",
+      },
+      {
+        step: "We confirm what we can do",
+        body: "You are told whether we can help with your vehicle, and the cost, before a technician is sent.",
+      },
+      {
+        step: "We come to the vehicle",
+        body: "Proof of ownership or authority to access the vehicle is checked on arrival.",
+      },
+      {
+        step: "The work is done on site",
+        body: "The vehicle is opened or the key is cut, and tested with you before we leave.",
+      },
+    ],
+    faqs: [
+      {
+        q: "Can you make a key for my vehicle?",
+        a: "It depends on the make, model and year. Please call with those details and we will confirm whether we can do it before booking a visit.",
+      },
+      {
+        q: "What do I need to show you?",
+        a: "Photo ID and proof that the vehicle is yours or that you are authorised to access it, such as the registration.",
+      },
+      {
+        q: "When are you available?",
+        a: "Monday to Friday, 8 a.m. to 5 p.m., across Winnipeg and surrounding communities.",
+      },
+    ],
+    related: [
+      "key-cutting-duplication-winnipeg",
+      "residential-locksmith-winnipeg",
+      "commercial-lockout-service-winnipeg",
     ],
   },
 ];

@@ -2,7 +2,7 @@
 
 Commercial locksmith website for Manitoba Lock & Safe, built with Next.js 16
 (App Router), TypeScript and Tailwind CSS v4. Every page is statically generated
-and optimised for commercial locksmith search in Winnipeg and across Manitoba.
+and optimised for locksmith search in Winnipeg and surrounding communities.
 
 ---
 
@@ -12,22 +12,23 @@ These items must be handled before the site goes public.
 
 ### 1. Contact details — `src/data/site.ts`
 
-Every phone number, email and address on the site (header, footer, buttons,
-schema.org markup, contact page) reads from this one file. Replace anything
-marked `TODO`:
+Every phone number, email and hours line on the site reads from this one file.
+These are now the real details: phone 431.485.4498, max@manitobalock.com,
+Monday–Friday 8–5, founded 1984, mobile-only (`address.hasStorefront: false`,
+so no street address or map is shown anywhere).
 
-| Field | Current placeholder |
+Still to supply:
+
+| Field | Status |
 | --- | --- |
-| `phone.display` / `phone.href` / `phone.e164` | `(204) 555-0100` |
-| `email` | `dispatch@manitobalock.com` |
-| `address` | `000 Example Street`, `R0R 0R0` |
-| `geo` | Approximate downtown Winnipeg coordinates |
-| `hours` | Confirm office hours; 24/7 emergency is currently advertised |
-| `social` | Empty — add real profile URLs (they feed footer links + `sameAs` schema) |
+| `media.vanPhoto` | Empty — the homepage draws a placeholder van until a photo is added to `public/` |
+| `media.teamPhoto` | Empty — placeholder box on the About page |
+| `social` | Empty — add real profile URLs |
+| Logo | Vector stand-in in `src/components/Logo.tsx` |
 
-If the business is mobile-only with no walk-in shop, set
-`address.hasStorefront: false` and the address block disappears everywhere,
-including the structured data.
+The site makes **no** 24/7, after-hours, emergency-dispatch or response-time
+claims. If hours change, update `hours` in `site.ts` and the hours FAQ in
+`src/data/faqs.ts`.
 
 ### 2. Quote form destination — `src/data/site.ts`
 
@@ -40,10 +41,10 @@ accepts a JSON `POST` works.
 
 ### 3. Testimonials — `src/data/testimonials.ts`
 
-**Currently placeholder.** An amber warning banner is displayed on the homepage
-until you fix this. Replace every entry with real, attributable quotes (Google
+**Currently placeholder.** The homepage testimonials section is hidden until
+you fix this. Replace every entry with real, attributable quotes (Google
 reviews are ideal), delete any you cannot source, then set
-`testimonialsArePlaceholder = false` to remove the banner.
+`testimonialsArePlaceholder = false` to show the section.
 
 Publishing invented reviews is a trust problem and, under Canada's Competition
 Act, a legal one.
@@ -105,12 +106,10 @@ line with PIPEDA. It is not legal advice — have a lawyer review it, bump the
 add a tool that touches visitor data (chat widget, booking tool, ad pixel, call
 tracking).
 
-### 10. Map accuracy
+### 10. Map
 
-The contact page embeds a Google map and a "Get directions" link driven by the
-address in `src/data/site.ts`. Until you replace the placeholder address, the map
-will point at the wrong place. The whole map section hides itself automatically
-if you set `address.hasStorefront: false`.
+The business is mobile-only, so the map and directions links are switched off.
+They return automatically if `address.hasStorefront` is set to `true`.
 
 ### 11. Logo
 
@@ -122,14 +121,14 @@ to match if the mark changes.
 
 ---
 
-## Site structure — 72 static pages
+## Site structure
 
 | Route | Pages | Notes |
 | --- | --- | --- |
-| `/` | 1 | Hero, quote form, services, credentials, clients, industries, service areas, case studies, testimonials, FAQ, blog |
-| `/services` + `/services/[slug]` | 12 | 11 service pages, each with offerings, signs, process, FAQs |
+| `/` | 1 | Hero, quote form, "I manage…" tiles, on-site service van, services, 3-step process, credentials, clients, industries, service areas, case studies, testimonials, FAQ, blog |
+| `/services` + `/services/[slug]` | 16 | 15 service pages (commercial, residential, automotive), each with offerings, signs, process, FAQs |
 | `/industries` + `/industries/[slug]` | 12 | 11 sectors |
-| `/service-areas` + `/service-areas/[slug]` | 23 | 13 Winnipeg areas + 9 Manitoba regions |
+| `/service-areas` + `/service-areas/[slug]` | 18 | 13 Winnipeg areas + 4 surrounding communities |
 | `/case-studies` + `/case-studies/[slug]` | 6 | 5 named clients |
 | `/blog` + `/blog/[slug]` | 7 | 6 long-form articles |
 | `/about`, `/contact`, `/faq`, `/careers` | 4 | |
@@ -148,7 +147,7 @@ to match if the mark changes.
 | 5 | Breadcrumbs | ✅ Visible on every inner page + `BreadcrumbList` schema |
 | 6 | Case studies | ✅ 5 — pending client sign-off (see item 4 above) |
 | 7 | 5 FAQs | ✅ 26 across 6 categories, plus FAQs on every service and industry page |
-| 8 | Response time promise | ✅ 30-minute Winnipeg promise, plus per-area response times |
+| 8 | Response time promise | ➖ Removed — hours are Mon–Fri 8–5, no response-time claims |
 | 9 | Sticky mobile CTA | ✅ Fixed bottom call/quote bar under 640px |
 | 10 | robots.txt | ✅ Generated, references the sitemap |
 | 11 | Unique page titles | ✅ Every page, verified across all 72 |
@@ -167,8 +166,8 @@ to match if the mark changes.
 - **Metadata** — unique title, description and canonical URL on every page,
   plus Open Graph and Twitter card tags.
 - **Structured data (JSON-LD)**
-  - `Locksmith` / `LocalBusiness` site-wide, including `areaServed` for all 22
-    locations, `openingHoursSpecification` (24/7), `hasOfferCatalog` listing all
+  - `Locksmith` / `LocalBusiness` site-wide, including `areaServed` for all 17
+    locations, `openingHoursSpecification` (Mon–Fri 8–5), `hasOfferCatalog` listing all
     11 services, and `geo` coordinates.
   - `Service` schema on each service and location page.
   - `FAQPage` on the homepage, FAQ page, every service page and every industry

@@ -69,7 +69,7 @@ export default async function IndustryPage({
         title={industry.heroHeading}
         blurb={industry.summary}
         crumbs={crumbs}
-        badges={["Winnipeg & all of Manitoba", "24/7 emergency response", "Documented key control"]}
+        badges={["Winnipeg & surrounding area", "Mobile service", "Documented key control"]}
       />
       <TrustBar />
 
@@ -183,7 +183,7 @@ export default async function IndustryPage({
 
       <CtaBand
         title={`Locksmith support for ${industry.shortName.toLowerCase()} in Winnipeg`}
-        blurb="Call for emergency dispatch, or request a site walk-through and a written quote."
+        blurb="Call us Monday to Friday, 8 to 5, or request a site walk-through and a written quote."
       />
     </>
   );

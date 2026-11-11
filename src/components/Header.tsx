@@ -50,12 +50,12 @@ export function Header() {
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-6 py-2 text-[0.8rem]">
           <p className="flex items-center gap-2 text-silver-300">
             <Icon name="shield" className="h-4 w-4 text-blue-500" />
-            Licensed, bonded &amp; insured · Serving all of Manitoba since {site.founded}
+            Licensed, bonded &amp; insured · Serving Winnipeg &amp; area since {site.founded}
           </p>
           <div className="flex items-center gap-5">
             <span className="flex items-center gap-2 text-silver-300">
               <Icon name="clock" className="h-4 w-4 text-blue-500" />
-              24/7 emergency commercial dispatch
+              {site.hours.office}
             </span>
             <a
               href={site.phone.href}

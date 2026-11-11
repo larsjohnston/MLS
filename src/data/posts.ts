@@ -84,7 +84,7 @@ export const posts: Post[] = [
       },
       {
         paragraphs: [
-          "None of this is expensive. All of it is cheaper than an emergency call at 6 a.m. on a −34 °C Monday when your staff cannot get in and your first customer is already waiting.",
+          "None of this is expensive. All of it is cheaper than a failed door on a −34 °C Monday morning when your staff cannot get in and your first customer is already waiting.",
         ],
       },
     ],
@@ -308,7 +308,7 @@ export const posts: Post[] = [
         heading: "Why the box-store lockset fails",
         paragraphs: [
           "The most common hardware failure we attend is Grade 3 residential hardware installed on a commercial door, usually because it was on the shelf and the price looked reasonable. It survives the warranty period and then fails — and the failure mode is almost always a lockset that no longer retracts the latch reliably, which is a lockout waiting for a Saturday morning.",
-          "Counting the emergency call, the replacement hardware and the lost trading time, the cheap lockset typically costs several times what the correct one would have.",
+          "Counting the urgent service call, the replacement hardware and the lost trading time, the cheap lockset typically costs several times what the correct one would have.",
         ],
       },
       {

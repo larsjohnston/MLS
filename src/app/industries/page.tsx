@@ -1,4 +1,5 @@
 import { industries } from "@/data/industries";
+import { site } from "@/data/site";
 import { PageHero } from "@/components/PageHero";
 import { CtaBand, LinkCard, Section, SectionHeading, TrustBar } from "@/components/Ui";
 import { JsonLd, pageMeta } from "@/lib/seo";
@@ -22,7 +23,7 @@ export default function IndustriesPage() {
         title="Commercial security built around your sector"
         blurb="Eleven sectors, each with its own constraints — regulatory requirements, operating hours, turnover patterns and the doors that matter most. We work to yours."
         crumbs={crumbs}
-        badges={["Winnipeg & all of Manitoba", "24/7 emergency response", "Since 2012"]}
+        badges={["Winnipeg & surrounding area", "Mobile service", `Since ${site.founded}`]}
       />
       <TrustBar />
 

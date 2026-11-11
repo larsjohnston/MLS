@@ -8,7 +8,7 @@ import { CallButton, Section } from "@/components/Ui";
 export const metadata = {
   title: "Thank you — we have your request",
   description:
-    "Your quote request has been received by Manitoba Lock & Safe. We reply within one business day, or call us now for 24/7 emergency commercial locksmith service in Winnipeg.",
+    "Your quote request has been received by Manitoba Lock & Safe. We reply within one business day, or call us Monday to Friday, 8 to 5, for locksmith service in Winnipeg.",
   // Conversion pages should never appear in search results.
   robots: { index: false, follow: true },
   alternates: { canonical: `${site.url}/thank-you` },
@@ -27,8 +27,8 @@ export default function ThankYouPage() {
           </h1>
           <p className="mt-5 text-lg leading-relaxed text-silver-300">
             A member of our team will review the details and come back to you
-            within one business day. If your situation is urgent, call us now
-            and we will dispatch a technician while you are still on the line.
+            within one business day. If your situation is urgent, call us
+            Monday to Friday, 8 to 5.
           </p>
           <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
             <CallButton />
@@ -59,7 +59,7 @@ export default function ThankYouPage() {
               },
               {
                 step: "We schedule around you",
-                body: "Work is booked into your operating hours, including evenings and weekends where that keeps your doors open.",
+                body: "Work is booked ahead, Monday to Friday, at a time that keeps disruption to your day low.",
               },
             ].map((s, i) => (
               <li

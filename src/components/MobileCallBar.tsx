@@ -12,7 +12,7 @@ export function MobileCallBar() {
           className="flex items-center justify-center gap-2 rounded-lg bg-red-600 px-3 py-3 font-display text-sm font-bold uppercase tracking-wide text-white"
         >
           <Icon name="phone" className="h-4 w-4" />
-          Call 24/7
+          Call now
         </a>
         <Link
           href="/contact"

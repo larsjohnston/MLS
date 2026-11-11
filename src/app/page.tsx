@@ -10,12 +10,14 @@ import { site, clients, brands } from "@/data/site";
 import { Icon } from "@/components/Icon";
 import { QuoteForm } from "@/components/QuoteForm";
 import { FaqAccordion } from "@/components/FaqAccordion";
+import { VanPhoto } from "@/components/VanPhoto";
 import {
   CallButton,
   CheckList,
   CredentialGrid,
   CtaBand,
   LinkCard,
+  ProcessSteps,
   QuoteButton,
   Section,
   SectionHeading,
@@ -26,13 +28,38 @@ import { JsonLd, pageMeta } from "@/lib/seo";
 import { faqSchema } from "@/lib/schema";
 
 export const metadata = pageMeta({
-  title: "Commercial Locksmith Winnipeg | 24/7 Emergency Service",
+  title: "Locksmith Winnipeg | Mobile Lock, Door & Safe Service",
   description:
-    "Winnipeg's commercial locksmith since 2012. 24/7 emergency lockouts, master key systems, access control, high-security locks, safes and door hardware across all of Manitoba. Licensed, bonded and insured.",
+    "Winnipeg's trusted locksmiths since 1984. Mobile service for businesses, homes and vehicles — locks and keys, rekeying, master key systems, access control, door repair, automatic doors and safes. Call 431.485.4498.",
   path: "/",
 });
 
 const homeFaqs = faqs.slice(0, 6);
+
+/** "I manage…" shortcuts — send each kind of visitor to the page written for them. */
+const audiences = [
+  { label: "Tenants", icon: "apartment", href: "/industries/property-management", body: "Property managers and landlords" },
+  { label: "Projects", icon: "construction", href: "/industries/construction-new-builds", body: "Builders and contractors" },
+  { label: "Employees", icon: "office", href: "/industries/office-buildings", body: "Business owners and office managers" },
+  { label: "Facilities", icon: "warehouse", href: "/industries/warehouse-industrial", body: "Facility and operations managers" },
+  { label: "Communities", icon: "school", href: "/industries/education", body: "Schools, churches and non-profits" },
+  { label: "My home", icon: "key", href: "/services/residential-locksmith-winnipeg", body: "Homeowners and renters" },
+];
+
+const processSteps = [
+  {
+    step: "Contact us",
+    body: "Call or send the form. Tell us what is going on and we will book a visit or a free evaluation.",
+  },
+  {
+    step: "Create a plan",
+    body: "Together we work out what your doors, locks and keys need, and you get a written quote before any work starts.",
+  },
+  {
+    step: "Get results",
+    body: "We come to you and do the work. You feel confident knowing your people and property are protected.",
+  },
+];
 
 export default function HomePage() {
   return (
@@ -43,24 +70,21 @@ export default function HomePage() {
       <section className="hero-texture">
         <div className="mx-auto grid max-w-7xl gap-12 px-6 py-14 lg:grid-cols-[1.15fr_1fr] lg:py-20">
           <div>
-            <p className="inline-flex items-center gap-2 rounded-full border border-red-600/40 bg-red-600/10 px-3.5 py-1.5 text-sm font-semibold text-red-500">
-              <span className="relative flex h-2 w-2">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-red-500 opacity-75" />
-                <span className="relative inline-flex h-2 w-2 rounded-full bg-red-500" />
-              </span>
-              24/7 emergency commercial dispatch
+            <p className="inline-flex items-center gap-2 rounded-full border border-blue-500/40 bg-blue-500/10 px-3.5 py-1.5 text-sm font-semibold text-blue-100">
+              <Icon name="truck" className="h-4 w-4" />
+              Mobile locksmith · {site.hours.short}
             </p>
 
             <h1 className="mt-5 font-display text-4xl font-extrabold leading-[1.05] tracking-tight text-white sm:text-5xl lg:text-6xl">
-              Commercial locksmith
-              <span className="block text-blue-500">for Winnipeg business</span>
+              We help you protect
+              <span className="block text-blue-500">your people and property</span>
             </h1>
 
             <p className="mt-5 max-w-2xl text-lg leading-relaxed text-silver-300">
-              {site.tagline}. Master key systems, access control, high-security
-              locks, safes and door hardware — installed, serviced and documented
-              by licensed technicians. Serving Winnipeg and all of Manitoba since{" "}
-              {site.founded}.
+              {site.tagline}. Locks and keys, doors and frames, automatic doors,
+              access control and safes — for your business, home or vehicle. We
+              are a mobile service, so we come to you anywhere in Winnipeg and
+              the surrounding communities.
             </p>
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -81,12 +105,58 @@ export default function HomePage() {
 
       <TrustBar />
 
+      {/* ── I manage… ────────────────────────────────────────────────────── */}
+      <Section>
+        <SectionHeading
+          eyebrow="I manage…"
+          title="Tell us what you look after"
+          blurb="Pick the one closest to you and we will show you how we help."
+          align="center"
+        />
+        <ul className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
+          {audiences.map((a) => (
+            <li key={a.label}>
+              <Link
+                href={a.href}
+                className="group flex h-full flex-col items-center rounded-xl border border-silver-300 bg-white px-4 py-6 text-center transition hover:-translate-y-0.5 hover:border-blue-600 hover:shadow-lg hover:shadow-navy-900/10"
+              >
+                <span className="flex h-16 w-16 items-center justify-center rounded-full bg-navy-900 text-white transition group-hover:bg-blue-600">
+                  <Icon name={a.icon} className="h-8 w-8" />
+                </span>
+                <span className="mt-4 font-display text-lg font-bold uppercase tracking-wide text-navy-900">
+                  {a.label}
+                </span>
+                <span className="mt-1 text-xs leading-snug text-silver-500">{a.body}</span>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </Section>
+
+      {/* ── On-site service ──────────────────────────────────────────────── */}
+      <Section tone="light">
+        <div className="grid items-center gap-10 lg:grid-cols-2">
+          <VanPhoto />
+          <div>
+            <SectionHeading
+              eyebrow="On-site service"
+              title="No shop to find. We come to you."
+              blurb={`Manitoba Lock & Safe is fully mobile. A technician arrives at your business, home or vehicle with the tools and hardware on the van — ${site.hours.office}.`}
+            />
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <QuoteButton label="Schedule now" />
+              <CallButton />
+            </div>
+          </div>
+        </div>
+      </Section>
+
       {/* ── Services ─────────────────────────────────────────────────────── */}
       <Section>
         <SectionHeading
-          eyebrow="Commercial services"
-          title="Everything a Winnipeg business needs from a locksmith"
-          blurb="We are commercial specialists. That focus is why our trucks carry the hardware your building actually uses, and why our technicians have seen your problem before."
+          eyebrow="Our services"
+          title="Locks, doors, keys and safes — business, home and auto"
+          blurb="Our vans carry the hardware your doors actually use, and our technicians have very likely seen your problem before."
         />
         <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((s) => (
@@ -102,22 +172,33 @@ export default function HomePage() {
         </div>
       </Section>
 
-      {/* ── Why us ───────────────────────────────────────────────────────── */}
+      {/* ── Our process ──────────────────────────────────────────────────── */}
       <Section tone="light">
+        <SectionHeading eyebrow="Our process" title="Three simple steps" align="center" />
+        <div className="mt-10">
+          <ProcessSteps steps={processSteps} />
+        </div>
+        <div className="mt-8 flex justify-center">
+          <QuoteButton label="Schedule now" />
+        </div>
+      </Section>
+
+      {/* ── Why us ───────────────────────────────────────────────────────── */}
+      <Section>
         <div className="grid gap-12 lg:grid-cols-2">
           <div>
             <SectionHeading
               eyebrow="Why Manitoba Lock & Safe"
-              title="Fast is the promise. Documented is the difference."
-              blurb="Anyone can open a door. What keeps commercial clients with us for a decade is that the work is specified properly, recorded properly and still makes sense three managers from now."
+              title="Done properly, and written down."
+              blurb="Anyone can open a door. What keeps clients with us is that the work is specified properly, recorded properly and still makes sense three managers from now."
             />
             <div className="mt-8">
               <CheckList
                 items={[
-                  "Emergency calls answered by a locksmith, not an answering service — 24 hours a day, every day of the year",
+                  "Fully mobile — we come to your business, home or vehicle, Monday to Friday",
                   "Non-destructive entry first on every lockout, so your existing hardware survives the call",
                   "Written key schedules and system charts you own, not records held hostage by a vendor",
-                  "Commercial-grade stock on every truck, so most jobs finish on the first visit",
+                  "Well-stocked vans, so most jobs finish on the first visit",
                   "Honest specification — we will tell you when a door does not need the expensive answer",
                   "One point of contact across every site in your portfolio",
                 ]}
@@ -150,7 +231,7 @@ export default function HomePage() {
       </Section>
 
       {/* ── Clients ──────────────────────────────────────────────────────── */}
-      <Section>
+      <Section tone="light">
         <SectionHeading
           eyebrow="Trusted by"
           title="Manitoba organisations that call us first"
@@ -174,7 +255,7 @@ export default function HomePage() {
       </Section>
 
       {/* ── Industries ───────────────────────────────────────────────────── */}
-      <Section tone="light">
+      <Section>
         <SectionHeading
           eyebrow="Industries we serve"
           title="Security shaped around how your sector actually operates"
@@ -202,11 +283,11 @@ export default function HomePage() {
       </Section>
 
       {/* ── Service areas ────────────────────────────────────────────────── */}
-      <Section>
+      <Section tone="light">
         <SectionHeading
           eyebrow="Service areas"
-          title="Winnipeg in about 30 minutes. Manitoba on schedule."
-          blurb="Emergency response runs 24/7 across Winnipeg and the capital region. Regional Manitoba is covered on planned service days, with emergency attendance by arrangement."
+          title="Winnipeg and surrounding communities"
+          blurb="We are mobile, so our service area is wherever the vans go — every Winnipeg neighbourhood and the communities around the city."
         />
         <div className="mt-10 grid gap-8 lg:grid-cols-2">
           <div>
@@ -229,7 +310,7 @@ export default function HomePage() {
           </div>
           <div>
             <h3 className="font-display text-lg font-bold uppercase tracking-wide text-navy-900">
-              Across Manitoba
+              Surrounding communities
             </h3>
             <ul className="mt-4 grid gap-2 sm:grid-cols-2">
               {manitobaLocations.map((l) => (
@@ -249,10 +330,10 @@ export default function HomePage() {
       </Section>
 
       {/* ── Case studies ─────────────────────────────────────────────────── */}
-      <Section tone="light">
+      <Section>
         <SectionHeading
           eyebrow="Case studies"
-          title="Work at the scale Manitoba's largest facilities require"
+          title="Work we have done for Winnipeg organisations"
         />
         <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {caseStudies.slice(0, 3).map((c) => (
@@ -280,15 +361,10 @@ export default function HomePage() {
       </Section>
 
       {/* ── Testimonials ─────────────────────────────────────────────────── */}
+      {/* Hidden until real reviews replace the placeholders in src/data/testimonials.ts */}
+      {!testimonialsArePlaceholder && (
       <Section>
         <SectionHeading eyebrow="What clients say" title="In their words" align="center" />
-        {testimonialsArePlaceholder && (
-          <p className="mx-auto mt-4 max-w-2xl rounded-lg border border-amber-400 bg-amber-50 px-4 py-3 text-center text-sm text-amber-900">
-            <strong>Placeholder content.</strong> Replace these with real,
-            attributable reviews before launch — see{" "}
-            <code>src/data/testimonials.ts</code>.
-          </p>
-        )}
         <div className="mt-10 grid gap-5 sm:grid-cols-2">
           {testimonials.map((t) => (
             <figure
@@ -313,11 +389,12 @@ export default function HomePage() {
           ))}
         </div>
       </Section>
+      )}
 
       {/* ── Brands ───────────────────────────────────────────────────────── */}
       <Section tone="light" className="!py-12">
         <p className="text-center font-display text-sm font-bold uppercase tracking-[0.2em] text-silver-500">
-          Certified on the hardware you already own
+          We work on the hardware you already own
         </p>
         <ul className="mt-6 flex flex-wrap items-center justify-center gap-x-8 gap-y-3">
           {brands.map((b) => (
@@ -354,7 +431,7 @@ export default function HomePage() {
         <SectionHeading
           eyebrow="Resources"
           title="Practical guidance from the field"
-          blurb="What we have learned keeping Manitoba's commercial doors working — written for facility managers and owners, not for other locksmiths."
+          blurb="What we have learned keeping Winnipeg's doors working — written for owners and managers, not for other locksmiths."
         />
         <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {posts.slice(0, 3).map((p) => (
