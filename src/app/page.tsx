@@ -11,18 +11,14 @@ import { Icon } from "@/components/Icon";
 import { QuoteForm } from "@/components/QuoteForm";
 import { FaqAccordion } from "@/components/FaqAccordion";
 import { VanPhoto } from "@/components/VanPhoto";
+import { AutomaticDoorDrawing, MasterKeyDiagram } from "@/components/Illustrations";
 import {
-  CallButton,
   CheckList,
   CredentialGrid,
-  CtaBand,
   LinkCard,
-  ProcessSteps,
   QuoteButton,
   Section,
   SectionHeading,
-  StatsBar,
-  TrustBar,
 } from "@/components/Ui";
 import { JsonLd, pageMeta } from "@/lib/seo";
 import { faqSchema } from "@/lib/schema";
@@ -46,20 +42,66 @@ const audiences = [
   { label: "My home", icon: "key", href: "/services/residential-locksmith-winnipeg", body: "Homeowners and renters" },
 ];
 
+/** The four headline categories, the same four the sister sites lead with. */
+const categories = [
+  { label: "Locks, Hardware & Keys", icon: "lock", href: "/services/commercial-lock-repair-installation-winnipeg" },
+  { label: "Door Repair & Installation", icon: "door", href: "/services/door-frame-storefront-repair-winnipeg" },
+  { label: "Automatic & Handicap Doors", icon: "accessible", href: "/services/automatic-door-operators-winnipeg" },
+  { label: "Safes & Vaults", icon: "safe", href: "/services/safe-opening-service-winnipeg" },
+];
+
 const processSteps = [
   {
-    step: "Contact us",
+    icon: "phone",
+    step: "Contact Us",
     body: "Call or send the form. Tell us what is going on and we will book a visit or a free evaluation.",
   },
   {
-    step: "Create a plan",
+    icon: "clipboard",
+    step: "Create a Plan",
     body: "Together we work out what your doors, locks and keys need, and you get a written quote before any work starts.",
   },
   {
-    step: "Get results",
+    icon: "shield",
+    step: "Get Results",
     body: "We come to you and do the work. You feel confident knowing your people and property are protected.",
   },
 ];
+
+function FeatureRow({
+  title,
+  body,
+  href,
+  art,
+  cta = "Learn More",
+  flip = false,
+}: {
+  title: string;
+  body: string;
+  href: string;
+  art: React.ReactNode;
+  cta?: string;
+  flip?: boolean;
+}) {
+  return (
+    <div className="grid items-center gap-8 md:grid-cols-2 md:gap-12">
+      <div className={flip ? "md:order-2" : ""}>{art}</div>
+      <div>
+        <h2 className="font-display text-3xl font-medium leading-tight text-white sm:text-4xl">
+          {title}
+        </h2>
+        <span aria-hidden="true" className="title-rule title-rule-dark mt-5" />
+        <p className="mt-6 text-lg leading-relaxed text-white/90">{body}</p>
+        <Link
+          href={href}
+          className="mt-7 inline-flex items-center justify-center rounded-lg bg-red-600 px-7 py-3 text-base font-medium text-white transition hover:bg-red-700"
+        >
+          {cta}
+        </Link>
+      </div>
+    </div>
+  );
+}
 
 export default function HomePage() {
   return (
@@ -67,46 +109,81 @@ export default function HomePage() {
       <JsonLd data={faqSchema(homeFaqs)} />
 
       {/* ── Hero ─────────────────────────────────────────────────────────── */}
-      <section className="hero-texture">
-        <div className="mx-auto grid max-w-7xl gap-12 px-6 py-14 lg:grid-cols-[1.15fr_1fr] lg:py-20">
-          <div>
-            <p className="inline-flex items-center gap-2 rounded-full border border-blue-500/40 bg-blue-500/10 px-3.5 py-1.5 text-sm font-semibold text-blue-100">
-              <Icon name="truck" className="h-4 w-4" />
-              Mobile locksmith · {site.hours.short}
-            </p>
-
-            <h1 className="mt-5 font-display text-4xl font-extrabold leading-[1.05] tracking-tight text-white sm:text-5xl lg:text-6xl">
-              We help you protect
-              <span className="block text-blue-500">your people and property</span>
-            </h1>
-
-            <p className="mt-5 max-w-2xl text-lg leading-relaxed text-silver-300">
-              {site.tagline}. Locks and keys, doors and frames, automatic doors,
-              access control and safes — for your business, home or vehicle. We
-              are a mobile service, so we come to you anywhere in Winnipeg and
-              the surrounding communities.
-            </p>
-
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <CallButton />
-              <QuoteButton dark label="Get a free quote" />
-            </div>
-
-            <div className="mt-10 border-t border-white/10 pt-8">
-              <StatsBar />
-            </div>
-          </div>
-
-          <div className="lg:pt-4">
-            <QuoteForm />
+      <section className="border-b-4 border-blue-600 bg-white">
+        <div className="mx-auto max-w-5xl px-6 py-14 text-center sm:py-20">
+          <h1 className="font-display text-4xl font-bold leading-[1.15] tracking-tight text-ink sm:text-5xl lg:text-6xl">
+            Winnipeg&rsquo;s Trusted Locksmiths{" "}
+            <span className="sm:block">Since {site.founded}</span>
+          </h1>
+          <span aria-hidden="true" className="title-rule mx-auto mt-7" />
+          <p className="mx-auto mt-7 max-w-3xl text-lg leading-relaxed text-ink">
+            Manitoba Lock &amp; Safe are Winnipeg&rsquo;s mobile locksmiths. We
+            specialize in the security and accessibility of your business, home
+            or vehicle, and are available for projects, repairs and maintenance
+            across Winnipeg and the surrounding communities.
+          </p>
+          <p className="mt-6 font-display text-2xl font-medium text-ink">
+            We come to you, Monday to Friday, 8 to 5.
+          </p>
+          <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
+            <Link
+              href="/services"
+              className="inline-flex items-center justify-center rounded-lg bg-blue-600 px-7 py-3.5 text-base font-medium text-white transition hover:bg-navy-800"
+            >
+              Explore Services
+            </Link>
+            <QuoteButton label="Contact Us" />
           </div>
         </div>
       </section>
 
-      <TrustBar />
+      {/* ── Categories ───────────────────────────────────────────────────── */}
+      <section className="bg-white">
+        <ul className="mx-auto grid max-w-5xl grid-cols-2 gap-6 px-6 py-8 sm:grid-cols-4">
+          {categories.map((c) => (
+            <li key={c.label}>
+              <Link
+                href={c.href}
+                className="group flex flex-col items-center text-center text-ink hover:text-blue-600"
+              >
+                <Icon name={c.icon} className="h-9 w-9" />
+                <span className="mt-2 max-w-[10rem] text-base font-semibold leading-snug">
+                  {c.label}
+                </span>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      {/* ── Features ─────────────────────────────────────────────────────── */}
+      <Section tone="navy">
+        <div className="mx-auto max-w-5xl space-y-16">
+          <FeatureRow
+            title="Control Access with a Custom Master Key System"
+            body="Need to control who can access what, and when? A master key system puts business owners and property managers in control of their buildings: one key for you, the right doors for everyone else, and a written record of who holds what."
+            href="/services/master-key-systems-winnipeg"
+            art={<MasterKeyDiagram />}
+          />
+          <FeatureRow
+            flip
+            title="Welcome Visitors with Automatic Doors"
+            body="Automatic doors welcome visitors of all abilities, including people with mobility needs and anyone pushing a cart or stroller. We install, service and repair automatic and push-button accessible doors. Not sure where to start? Contact us and we will guide you through it."
+            href="/services/automatic-door-operators-winnipeg"
+            art={<AutomaticDoorDrawing />}
+          />
+          <FeatureRow
+            title="On-Site Service. We Come to You."
+            body={`Manitoba Lock & Safe is fully mobile, so there is no shop to find. A technician arrives at your business, home or vehicle with the tools and hardware on the van, Monday to Friday, 8 to 5.`}
+            href="/contact"
+            cta="Schedule Now"
+            art={<VanPhoto />}
+          />
+        </div>
+      </Section>
 
       {/* ── I manage… ────────────────────────────────────────────────────── */}
-      <Section>
+      <Section tone="light">
         <SectionHeading
           eyebrow="I manage…"
           title="Tell us what you look after"
@@ -133,24 +210,6 @@ export default function HomePage() {
         </ul>
       </Section>
 
-      {/* ── On-site service ──────────────────────────────────────────────── */}
-      <Section tone="light">
-        <div className="grid items-center gap-10 lg:grid-cols-2">
-          <VanPhoto />
-          <div>
-            <SectionHeading
-              eyebrow="On-site service"
-              title="No shop to find. We come to you."
-              blurb={`Manitoba Lock & Safe is fully mobile. A technician arrives at your business, home or vehicle with the tools and hardware on the van — ${site.hours.office}.`}
-            />
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <QuoteButton label="Schedule now" />
-              <CallButton />
-            </div>
-          </div>
-        </div>
-      </Section>
-
       {/* ── Services ─────────────────────────────────────────────────────── */}
       <Section>
         <SectionHeading
@@ -172,19 +231,43 @@ export default function HomePage() {
         </div>
       </Section>
 
+      {/* ── Clients ──────────────────────────────────────────────────────── */}
+      <section className="bg-blue-600 text-white">
+        <div className="mx-auto max-w-5xl px-6 py-16 text-center">
+          <h2 className="font-display text-4xl font-bold sm:text-5xl">Our Clients</h2>
+          <span aria-hidden="true" className="title-rule title-rule-clients mx-auto mt-5" />
+          <ul className="mt-10 flex flex-wrap items-center justify-center gap-x-12 gap-y-6">
+            {clients.map((c) => (
+              <li key={c} className="font-display text-xl font-bold leading-tight sm:text-2xl">
+                {c}
+              </li>
+            ))}
+          </ul>
+          <p className="mt-8 text-sm">
+            <Link href="/case-studies" className="font-semibold underline underline-offset-4 hover:text-blue-100">
+              Read the case studies
+            </Link>
+          </p>
+        </div>
+      </section>
+
       {/* ── Our process ──────────────────────────────────────────────────── */}
-      <Section tone="light">
-        <SectionHeading eyebrow="Our process" title="Three simple steps" align="center" />
-        <div className="mt-10">
-          <ProcessSteps steps={processSteps} />
-        </div>
-        <div className="mt-8 flex justify-center">
-          <QuoteButton label="Schedule now" />
-        </div>
+      <Section tone="navy">
+        <ol className="mx-auto grid max-w-4xl gap-10 text-center sm:grid-cols-3">
+          {processSteps.map((s, i) => (
+            <li key={s.step} className="flex flex-col items-center">
+              <Icon name={s.icon} className="h-16 w-16 text-white" />
+              <h3 className="mt-4 font-display text-xl font-semibold text-white">
+                {i + 1}. {s.step}
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-blue-100">{s.body}</p>
+            </li>
+          ))}
+        </ol>
       </Section>
 
       {/* ── Why us ───────────────────────────────────────────────────────── */}
-      <Section>
+      <Section tone="light">
         <div className="grid gap-12 lg:grid-cols-2">
           <div>
             <SectionHeading
@@ -228,30 +311,6 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-      </Section>
-
-      {/* ── Clients ──────────────────────────────────────────────────────── */}
-      <Section tone="light">
-        <SectionHeading
-          eyebrow="Trusted by"
-          title="Manitoba organisations that call us first"
-          align="center"
-        />
-        <ul className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
-          {clients.map((c) => (
-            <li
-              key={c}
-              className="flex items-center justify-center rounded-xl border border-silver-300 bg-white px-4 py-6 text-center font-display text-lg font-bold leading-tight text-navy-900"
-            >
-              {c}
-            </li>
-          ))}
-        </ul>
-        <p className="mt-6 text-center text-sm text-silver-500">
-          <Link href="/case-studies" className="font-semibold text-blue-600 hover:underline">
-            Read the case studies →
-          </Link>
-        </p>
       </Section>
 
       {/* ── Industries ───────────────────────────────────────────────────── */}
@@ -458,7 +517,37 @@ export default function HomePage() {
         </div>
       </Section>
 
-      <CtaBand />
+      {/* ── Let's talk ───────────────────────────────────────────────────── */}
+      <Section tone="navy" id="lets-talk">
+        <div className="text-center">
+          <h2 className="font-display text-4xl font-bold text-white sm:text-5xl">
+            Let&rsquo;s Talk
+          </h2>
+          <span aria-hidden="true" className="title-rule title-rule-dark mx-auto mt-5" />
+          <ul className="mt-8 flex flex-col items-center justify-center gap-4 text-lg text-white sm:flex-row sm:gap-12">
+            <li>
+              <a href={`mailto:${site.email}`} className="flex items-center gap-2.5 hover:text-blue-100">
+                <Icon name="mail" className="h-6 w-6" />
+                {site.email}
+              </a>
+            </li>
+            <li className="flex items-center gap-2.5">
+              <Icon name="truck" className="h-6 w-6" />
+              Mobile service, Winnipeg &amp; area
+            </li>
+            <li>
+              <a href={site.phone.href} className="flex items-center gap-2.5 hover:text-blue-100">
+                <Icon name="phone" className="h-6 w-6" />
+                {site.phone.display}
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div className="mx-auto mt-10 max-w-2xl">
+          <QuoteForm />
+        </div>
+      </Section>
+
     </>
   );
 }

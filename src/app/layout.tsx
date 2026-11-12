@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Barlow_Condensed } from "next/font/google";
+import { Outfit } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -9,16 +9,11 @@ import { JsonLd } from "@/lib/seo";
 import { localBusinessSchema, websiteSchema } from "@/lib/schema";
 import { site } from "@/data/site";
 
-const inter = Inter({
+// One geometric sans for everything, to match the Century Gothic look of the
+// sister sites (calgarylockandsafe.com, edmontonlock.com).
+const outfit = Outfit({
   subsets: ["latin"],
-  variable: "--font-inter",
-  display: "swap",
-});
-
-const barlow = Barlow_Condensed({
-  subsets: ["latin"],
-  weight: ["500", "600", "700", "800"],
-  variable: "--font-barlow",
+  variable: "--font-outfit",
   display: "swap",
 });
 
@@ -75,7 +70,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en-CA" className={`${inter.variable} ${barlow.variable} h-full`}>
+    <html lang="en-CA" className={`${outfit.variable} h-full`}>
       <body className="flex min-h-full flex-col antialiased">
         <JsonLd data={[localBusinessSchema, websiteSchema]} />
         <Header />

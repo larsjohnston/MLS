@@ -9,16 +9,16 @@ export function MobileCallBar() {
       <div className="grid grid-cols-2 gap-2 p-2.5">
         <a
           href={site.phone.href}
-          className="flex items-center justify-center gap-2 rounded-lg bg-red-600 px-3 py-3 font-display text-sm font-bold uppercase tracking-wide text-white"
+          className="flex items-center justify-center gap-2 rounded-lg bg-blue-600 px-3 py-3 text-sm font-medium text-white"
         >
           <Icon name="phone" className="h-4 w-4" />
-          Call now
+          Call Now
         </a>
         <Link
           href="/contact"
-          className="flex items-center justify-center gap-2 rounded-lg border border-white/30 px-3 py-3 font-display text-sm font-bold uppercase tracking-wide text-white"
+          className="flex items-center justify-center gap-2 rounded-lg bg-red-600 px-3 py-3 text-sm font-medium text-white"
         >
-          Get a quote
+          Request Service
         </Link>
       </div>
     </div>

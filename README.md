@@ -211,8 +211,15 @@ internal links all generate automatically.
 
 ## Design system
 
-Palette follows the company logo (shared with the Winnipeg Jets), defined as
-Tailwind theme tokens in `src/app/globals.css`:
+The look follows the two sister sites, calgarylockandsafe.com and
+edmontonlock.com: white pages, a centred "Trusted Locksmiths Since…" headline,
+a short two-tone rule under titles, a blue **Call Now** and red **Request
+Service** button pair, four headline category icons, flat navy bands for
+feature rows, an "Our Clients" band, the three-step process and a "Let's Talk"
+contact band.
+
+Colours come from the Manitoba Lock & Safe logo and are defined as Tailwind
+theme tokens in `src/app/globals.css`:
 
 | Token | Hex |
 | --- | --- |
@@ -221,11 +228,13 @@ Tailwind theme tokens in `src/app/globals.css`:
 | `red-600` | `#AC162C` |
 | `silver-500` | `#8E9090` |
 
-Typography is Barlow Condensed (display/headings) and Inter (body).
+Typography is Outfit throughout, a geometric sans close to the Century Gothic
+used on the sister sites.
 
-Click-to-call is the primary action throughout: red button in the header, a
-fixed bottom bar on mobile, and a call CTA in every section band. The quote form
-is the secondary action.
+The logo (`src/components/Logo.tsx`), the van (`src/components/VanPhoto.tsx`)
+and the feature drawings (`src/components/Illustrations.tsx`) are vector
+redraws. Replace them with the original logo file and real photographs when
+available.
 
 ## Local development
 

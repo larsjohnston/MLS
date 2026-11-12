@@ -27,68 +27,62 @@ export function VanPhoto() {
   }
 
   return (
-    <div className="rounded-2xl border border-silver-300 bg-silver-100 p-6 sm:p-10">
+    <div className="bg-white p-2 shadow-lg shadow-black/20"><div className="bg-silver-100 p-6 sm:p-8">
       <svg
-        viewBox="0 0 480 220"
+        viewBox="0 0 480 230"
         role="img"
-        aria-label={`Illustration of a ${site.name} mobile service van`}
+        aria-label={`Drawing of a ${site.name} service van: white with diagonal blue and black stripes and a red cab`}
         className="h-auto w-full"
       >
+        <defs>
+          <clipPath id="van-body">
+            <path d="M44 60Q44 48 56 48H316q14 0 24 12l50 62 40 14q12 4 12 16v34H44Z" />
+          </clipPath>
+        </defs>
         {/* ground */}
-        <path d="M20 196h440" stroke="#8E9090" strokeWidth="3" strokeLinecap="round" />
-        {/* body */}
-        <path
-          d="M40 60a14 14 0 0 1 14-14h236a14 14 0 0 1 14 14v112H40Z"
-          fill="#041E42"
-        />
-        {/* cab */}
-        <path
-          d="M304 78h62a16 16 0 0 1 13 7l44 58a16 16 0 0 1 3 10v19H304Z"
-          fill="#004C97"
-        />
-        {/* windscreen + side window */}
-        <path d="M322 92h40a6 6 0 0 1 5 3l28 38h-73Z" fill="#DCE9F7" />
-        {/* stripe */}
-        <path d="M40 142h386v10H40Z" fill="#AC162C" />
-        {/* bumper + lights */}
-        <rect x="34" y="166" width="398" height="10" rx="5" fill="#8E9090" />
-        <rect x="418" y="146" width="10" height="12" rx="3" fill="#F6C945" />
-        {/* door line + handle */}
-        <path d="M304 60v112" stroke="#02132A" strokeWidth="2" />
-        <rect x="312" y="140" width="16" height="4" rx="2" fill="#DCE9F7" />
-        {/* lettering */}
-        <text
-          x="172"
-          y="92"
-          textAnchor="middle"
-          fill="#FFFFFF"
-          className="font-display"
-          fontWeight="800"
-          fontSize="26"
-          letterSpacing="1"
-        >
-          MANITOBA LOCK &amp; SAFE
-        </text>
-        <text
-          x="172"
-          y="122"
-          textAnchor="middle"
-          fill="#DCE9F7"
-          className="font-display"
-          fontWeight="700"
-          fontSize="20"
-          letterSpacing="1.5"
-        >
-          {site.phone.display}
-        </text>
+        <path d="M16 213h448" stroke="#8E9090" strokeWidth="3" strokeLinecap="round" />
+        {/* wrapped body */}
+        <g clipPath="url(#van-body)">
+          <rect x="40" y="40" width="410" height="150" fill="#F4F6F8" />
+          {/* rear stripes */}
+          <path d="M44 62v32l100 106h30Z" fill="#0A5CA8" />
+          <path d="M44 108v18l72 74h18Z" fill="#111827" />
+          <path d="M44 138v22l38 40h20Z" fill="#0A5CA8" />
+          {/* centre stripes */}
+          <path d="M212 40h10l146 160h-10Z" fill="#111827" />
+          <path d="M236 40h40l146 160h-40Z" fill="#111827" />
+          {/* red cab */}
+          <path d="M292 40h188v160h-42Z" fill="#C8102E" />
+          {/* sill and front bumper */}
+          <rect x="40" y="176" width="410" height="14" fill="#111827" />
+          <path d="M404 152h46v38h-46Z" fill="#111827" />
+          {/* cab window */}
+          <path d="M340 70h8l36 46h-44Z" fill="#1F2937" />
+          <path d="M344 76h2l26 34h-28Z" fill="#DCEAF7" opacity="0.35" />
+          {/* shield + wordmark, set on the diagonal like the real wrap */}
+          <g transform="translate(118 70)">
+            <path d="M0 -14 14 -9v11c0 9-7 14-14 18-7-4-14-9-14-18V-9Z" fill="#041E42" />
+            <path d="M0 -11 11 -7v9c0 7-5 11-11 15Z" fill="#C8102E" />
+            <path d="M0 -11 -11 -7v9c0 7 5 11 11 15Z" fill="#0A5CA8" />
+            <circle cx="0" cy="-3" r="3" fill="#fff" />
+            <path d="M-1.2 -1h2.4l-.6 8h-1.2Z" fill="#fff" />
+          </g>
+          <g transform="translate(152 74) rotate(40)" fill="#111827" className="font-display" fontWeight="900">
+            <text x="0" y="0" fontSize="15">MANITOBA</text>
+            <text x="-6" y="21" fontSize="21">LOCK &amp; SAFE</text>
+          </g>
+        </g>
+        {/* headlight */}
+        <rect x="426" y="140" width="14" height="8" rx="3" fill="#F6C945" />
         {/* wheels */}
-        {[110, 362].map((cx) => (
+        {[118, 374].map((cx) => (
           <g key={cx}>
-            <circle cx={cx} cy="176" r="24" fill="#02132A" />
-            <circle cx={cx} cy="176" r="10" fill="#8E9090" />
+            <circle cx={cx} cy="188" r="25" fill="#111827" />
+            <circle cx={cx} cy="188" r="11" fill="#C8CBCD" />
           </g>
         ))}
       </svg>
+      </div>
     </div>
   );
 }

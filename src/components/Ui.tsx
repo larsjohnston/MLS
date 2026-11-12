@@ -52,16 +52,22 @@ export function SectionHeading({
         </p>
       )}
       <h2
-        className={`mt-2 font-display text-3xl font-extrabold leading-tight tracking-tight sm:text-4xl ${
-          dark ? "text-white" : "text-navy-900"
+        className={`mt-2 font-display text-3xl font-bold leading-tight tracking-tight sm:text-4xl ${
+          dark ? "text-white" : "text-ink"
         }`}
       >
         {title}
       </h2>
+      <span
+        aria-hidden="true"
+        className={`title-rule mt-5 ${dark ? "title-rule-dark" : ""} ${
+          align === "center" ? "mx-auto" : ""
+        }`}
+      />
       {blurb && (
         <p
           className={`mt-4 text-lg leading-relaxed ${
-            dark ? "text-silver-300" : "text-silver-500"
+            dark ? "text-blue-100" : "text-navy-800/80"
           }`}
         >
           {blurb}
@@ -94,7 +100,7 @@ export function CallButton({ className = "", label }: { className?: string; labe
   return (
     <a
       href={site.phone.href}
-      className={`inline-flex items-center justify-center gap-2.5 rounded-lg bg-red-600 px-6 py-4 font-display text-base font-bold uppercase tracking-wide text-white transition hover:bg-red-700 ${className}`}
+      className={`inline-flex items-center justify-center gap-2.5 rounded-lg bg-blue-600 px-6 py-3.5 text-base font-medium text-white transition hover:bg-navy-800 ${className}`}
     >
       <Icon name="phone" className="h-5 w-5" />
       {label ?? `Call ${site.phone.display}`}
@@ -104,7 +110,7 @@ export function CallButton({ className = "", label }: { className?: string; labe
 
 export function QuoteButton({
   className = "",
-  label = "Request a quote",
+  label = "Request Service",
   dark = false,
 }: {
   className?: string;
@@ -114,10 +120,8 @@ export function QuoteButton({
   return (
     <Link
       href="/contact"
-      className={`inline-flex items-center justify-center gap-2 rounded-lg border-2 px-6 py-4 font-display text-base font-bold uppercase tracking-wide transition ${
-        dark
-          ? "border-white/70 text-white hover:bg-white hover:text-navy-900"
-          : "border-navy-900 text-navy-900 hover:bg-navy-900 hover:text-white"
+      className={`inline-flex items-center justify-center gap-2 rounded-lg bg-red-600 px-6 py-3.5 text-base font-medium text-white transition hover:bg-red-700 ${
+        dark ? "" : ""
       } ${className}`}
     >
       {label}
@@ -196,7 +200,7 @@ export function CtaBand({
       <div className="mx-auto max-w-7xl px-6 py-16 sm:py-20">
         <div className="grid items-center gap-8 lg:grid-cols-[1.4fr_1fr]">
           <div>
-            <h2 className="font-display text-3xl font-extrabold leading-tight text-white sm:text-4xl">
+            <h2 className="font-display text-3xl font-bold leading-tight text-white sm:text-4xl">
               {title}
             </h2>
             <p className="mt-4 max-w-2xl text-lg leading-relaxed text-silver-300">

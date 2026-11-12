@@ -47,9 +47,8 @@ export function Header() {
       {/* utility bar */}
       <div className="hidden bg-navy-900 text-white lg:block">
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-6 py-2 text-[0.8rem]">
-          <p className="flex items-center gap-2 text-silver-300">
-            <Icon name="shield" className="h-4 w-4 text-blue-500" />
-            Licensed, bonded &amp; insured · Serving Winnipeg &amp; area since {site.founded}
+          <p className="font-semibold text-white">
+            Proudly Serving Winnipeg &amp; Surrounding Area Since {site.founded}.
           </p>
           <div className="flex items-center gap-5">
             <span className="flex items-center gap-2 text-silver-300">
@@ -164,24 +163,22 @@ export function Header() {
           <div className="flex items-center gap-2">
             <Link
               href="/contact"
-              className="hidden rounded-lg border-2 border-navy-900 px-4 py-2.5 text-sm font-semibold text-navy-900 transition hover:bg-navy-900 hover:text-white xl:inline-flex"
+              className="order-2 hidden rounded-lg bg-red-600 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-red-700 sm:inline-flex"
             >
-              Request a quote
+              Request Service
             </Link>
             <a
               href={site.phone.href}
-              className="hidden items-center gap-2 rounded-lg bg-red-600 px-4 py-2.5 text-sm font-bold text-white transition hover:bg-red-700 sm:inline-flex"
+              className="order-1 hidden items-center gap-2 rounded-lg bg-blue-600 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-navy-800 sm:inline-flex"
             >
-              <Icon name="phone" className="h-4 w-4" />
-              <span className="hidden md:inline">{site.phone.display}</span>
-              <span className="md:hidden">Call now</span>
+              Call Now
             </a>
             <button
               type="button"
               onClick={() => setMobileOpen((v) => !v)}
               aria-label={mobileOpen ? "Close menu" : "Open menu"}
               aria-expanded={mobileOpen}
-              className="rounded-lg border border-silver-300 p-2.5 text-navy-900 lg:hidden"
+              className="order-3 rounded-lg border border-silver-300 p-2.5 text-navy-900 lg:hidden"
             >
               <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
                 {mobileOpen ? (
@@ -194,7 +191,7 @@ export function Header() {
           </div>
         </div>
       </div>
-      <div className="brand-rule h-1 w-full" />
+      <div className="h-1 w-full bg-blue-600" />
 
       {/* mobile drawer */}
       {mobileOpen && (
@@ -251,16 +248,16 @@ export function Header() {
             <div className="mt-6 space-y-3 pb-24">
               <a
                 href={site.phone.href}
-                className="flex items-center justify-center gap-2 rounded-lg bg-red-600 px-4 py-4 text-base font-bold text-white"
+                className="flex items-center justify-center gap-2 rounded-lg bg-blue-600 px-4 py-4 text-base font-medium text-white"
               >
                 <Icon name="phone" className="h-5 w-5" />
                 {site.phone.display}
               </a>
               <Link
                 href="/contact"
-                className="flex items-center justify-center rounded-lg border-2 border-navy-900 px-4 py-4 text-base font-semibold text-navy-900"
+                className="flex items-center justify-center rounded-lg bg-red-600 px-4 py-4 text-base font-medium text-white"
               >
-                Request a quote
+                Request Service
               </Link>
             </div>
           </nav>
@@ -274,7 +271,7 @@ function NavLink({ href, children }: { href: string; children: React.ReactNode }
   return (
     <Link
       href={href}
-      className="rounded-lg px-3 py-2 text-sm font-semibold text-navy-900 hover:bg-silver-100"
+      className="rounded-lg px-3 py-2 text-sm font-medium uppercase tracking-wide text-ink hover:bg-silver-100"
     >
       {children}
     </Link>
@@ -300,7 +297,7 @@ function NavDropdown({
         type="button"
         onClick={onToggle}
         aria-expanded={isOpen}
-        className="flex items-center gap-1.5 rounded-lg px-3 py-2 text-sm font-semibold text-navy-900 hover:bg-silver-100"
+        className="flex items-center gap-1.5 rounded-lg px-3 py-2 text-sm font-medium uppercase tracking-wide text-ink hover:bg-silver-100"
       >
         {label}
         <svg viewBox="0 0 24 24" className={`h-3.5 w-3.5 transition ${isOpen ? "rotate-180" : ""}`} fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">

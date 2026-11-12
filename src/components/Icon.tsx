@@ -1,6 +1,25 @@
 type IconProps = { name: string; className?: string };
 
 const paths: Record<string, React.ReactNode> = {
+  lock: (
+    <>
+      <rect x="5" y="10" width="14" height="11" rx="2" />
+      <path d="M8 10V7a4 4 0 0 1 8 0v3M12 14.5v2.5" />
+    </>
+  ),
+  accessible: (
+    <>
+      <circle cx="10" cy="4" r="1.6" />
+      <path d="M10 7.5v6.5h5l2.5 5.5M10 10.5h4.5" />
+      <path d="M7.5 12a5.2 5.2 0 1 0 7 7" />
+    </>
+  ),
+  clipboard: (
+    <>
+      <rect x="5" y="4" width="14" height="17" rx="2" />
+      <path d="M9 4h6v3H9zM9 12h6M9 16h4" />
+    </>
+  ),
   siren: (
     <>
       <path d="M12 3a5 5 0 0 0-5 5v5h10V8a5 5 0 0 0-5-5Z" />
