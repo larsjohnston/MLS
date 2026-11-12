@@ -113,11 +113,9 @@ They return automatically if `address.hasStorefront` is set to `true`.
 
 ### 11. Logo
 
-`src/components/Logo.tsx` contains a vector recreation of the shield mark. If
-you have the original artwork, add it at `public/logo.svg` and swap the
-`ShieldMark` component for a `next/image`. The favicon is `src/app/icon.svg` and
-the social share image is `src/app/opengraph-image.tsx` — both should be updated
-to match if the mark changes.
+The header and footer use the owner's logo file, `public/logo.png`. To change
+it, replace that file (keep the name). The favicon is `src/app/icon.svg` and
+the social share image is `src/app/opengraph-image.tsx`.
 
 ---
 
@@ -231,10 +229,9 @@ theme tokens in `src/app/globals.css`:
 Typography is Outfit throughout, a geometric sans close to the Century Gothic
 used on the sister sites.
 
-The logo (`src/components/Logo.tsx`), the van (`src/components/VanPhoto.tsx`)
-and the feature drawings (`src/components/Illustrations.tsx`) are vector
-redraws. Replace them with the original logo file and real photographs when
-available.
+The logo (`public/logo.png`) and the van photo (`public/van.webp`) are the
+owner's own files. The feature drawings (`src/components/Illustrations.tsx`)
+are vector drawings; replace them with real photographs when available.
 
 ## Local development
 

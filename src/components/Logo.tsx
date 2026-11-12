@@ -1,10 +1,8 @@
+import Image from "next/image";
+
 /**
- * Vector redraw of the Manitoba Lock & Safe logo supplied by the owner: a
- * navy-edged shield split blue (left) and red (right) with a white keyhole,
- * beside a heavy black two-line wordmark.
- *
- * If the original artwork file is available, add it at /public/logo.svg (or
- * .png) and swap this component for an <Image />.
+ * Vector shield only, kept for small uses where the full logo will not fit.
+ * The full logo is the owner's own artwork at /public/logo.png (see Logo).
  */
 export function ShieldMark({ className = "h-10 w-10" }: { className?: string }) {
   return (
@@ -52,6 +50,11 @@ export function ShieldMark({ className = "h-10 w-10" }: { className?: string }) 
   );
 }
 
+/**
+ * The company logo, exactly as supplied by the owner (public/logo.png).
+ * The artwork has black lettering, so on dark backgrounds (`dark`) it sits on
+ * a white plate rather than being recoloured.
+ */
 export function Logo({
   className = "",
   dark = false,
@@ -61,25 +64,19 @@ export function Logo({
   dark?: boolean;
   compact?: boolean;
 }) {
-  return (
-    <span className={`flex items-center gap-2.5 ${className}`}>
-      <ShieldMark className={compact ? "h-10 w-auto" : "h-12 w-auto"} />
-      <span className="flex flex-col leading-none">
-        <span
-          className={`font-display text-[1.05rem] font-black leading-none tracking-tight sm:text-lg ${
-            dark ? "text-white" : "text-black"
-          }`}
-        >
-          MANITOBA
-        </span>
-        <span
-          className={`font-display text-[1.4rem] font-black leading-none tracking-tight sm:text-2xl ${
-            dark ? "text-white" : "text-black"
-          }`}
-        >
-          LOCK &amp; SAFE
-        </span>
-      </span>
-    </span>
+  const img = (
+    <Image
+      src="/logo.png"
+      alt="Manitoba Lock & Safe"
+      width={559}
+      height={193}
+      priority
+      className={compact ? "h-10 w-auto" : "h-12 w-auto sm:h-14"}
+    />
+  );
+  return dark ? (
+    <span className={`inline-block rounded-lg bg-white px-3 py-2 ${className}`}>{img}</span>
+  ) : (
+    <span className={`inline-block ${className}`}>{img}</span>
   );
 }
