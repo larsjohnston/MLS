@@ -14,13 +14,14 @@ export function VanPhoto() {
 
   if (vanPhoto) {
     return (
-      <div className="relative aspect-[16/9] w-full overflow-hidden rounded-2xl border border-silver-300">
+      <div className="bg-white p-4 shadow-lg shadow-black/20 sm:p-6">
         <Image
           src={vanPhoto}
           alt={vanPhotoAlt}
-          fill
-          sizes="(min-width: 1024px) 45vw, 100vw"
-          className="object-cover"
+          width={2000}
+          height={754}
+          sizes="(min-width: 768px) 480px, 100vw"
+          className="h-auto w-full"
         />
       </div>
     );

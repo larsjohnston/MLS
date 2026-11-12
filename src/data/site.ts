@@ -72,8 +72,9 @@ export const site = {
     teamPhoto: "", // e.g. "/team.jpg"
     teamPhotoAlt: "The Manitoba Lock & Safe technicians with a service van",
     // A side-on shot of a service van. Shown on the homepage.
-    vanPhoto: "", // e.g. "/van.jpg"
-    vanPhotoAlt: "A Manitoba Lock & Safe mobile service van",
+    vanPhoto: "/van.webp",
+    vanPhotoAlt:
+      "A Manitoba Lock & Safe service van, white with blue and black diagonal stripes and a red cab",
   },
 } as const;
 
